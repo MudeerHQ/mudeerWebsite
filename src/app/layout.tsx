@@ -57,7 +57,7 @@ export default function RootLayout({
         ${DINNextBold.variable}
         ${DINNextThin.variable}
         ${DINNextHeavy.variable}
-        `}
+         bg-[#F5F5F4]`}
       >
         <Navbar />
         {children}

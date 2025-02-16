@@ -7,7 +7,7 @@ import { ArrowLeft, ChevronDown } from "lucide-react";
 export default function Navbar() {
   return (
     <div
-      className="sticky top-4 z-50 flex justify-between items-center mt-4 mx-24 rounded-xl bg-[#FFFFFFD9] px-6 py-2 border border-[#F4F4F5]"
+      className="fixed top-4 right-0 z-50 flex justify-between items-center mt-4 mx-24 rounded-xl bg-[#FFFFFFD9] px-6 py-2 border border-[#F4F4F5] w-[85%]"
       dir="rtl"
     >
       <div>
