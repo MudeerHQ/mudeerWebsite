@@ -93,7 +93,7 @@ export default function Partners() {
       </div>
 
       {/* Partners Section */}
-      <div className="text-center">
+      <div className="text-center mt-10">
         <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
           تعتمد أكبر فرق الأعمال وأسرعها نموًا على مدير
         </div>

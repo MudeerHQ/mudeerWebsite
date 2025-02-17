@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logoArabic from "../assets/logo-ar.png";
+import logoArabic from "./../app/assets/logo-ar.png";
 import { ArrowLeft, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
