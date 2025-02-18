@@ -7,12 +7,21 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Check } from "lucide-react";
-export default function PackagesTables() {
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Check, Info } from "lucide-react";
+
+export default function PackagesWebTables() {
   return (
     <div className="py-20 mb-10">
       <div className="flex justify-center items-center">
-        <h3 className="text-[64px] font-semibold max-sm:text-3xl">مقارنة الباقات</h3>
+        <h3 className="text-[64px] font-semibold max-sm:text-3xl">
+          مقارنة الباقات
+        </h3>
       </div>
       <div>
         <Table className="px-20 border-separate border-spacing-y-3 overflow-x-scroll w-[1200px] m-auto">
@@ -409,32 +418,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                الإحصاءات والتقارير{" "}
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  الإحصاءات والتقارير
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-            </TableRow>
-            <TableRow className="flex justify-end w-[1200px] py-3 ">
-              <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                التعليقات{" "}
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
@@ -459,7 +457,60 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                مهام من نوع مراحل Milestone{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  التعليقات
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow className="flex justify-end w-[1200px] py-3 ">
+              <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  مهام من نوع مراحل Milestone
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 __
@@ -482,7 +533,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                إضافة المرفقات{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  إضافة المرفقات
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
@@ -507,7 +572,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                الكانفاس Canvas{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  الكانفاس Canvas
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
@@ -598,32 +677,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                قسم مهامي{" "}
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  قسم مهامي
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
-                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
-                  <Check className="text-white" strokeWidth={3} size={14} />
-                </div>
-              </TableCell>
-            </TableRow>
-            <TableRow className="flex justify-end w-[1200px] py-3 ">
-              <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                تخصيص الرئيسية{" "}
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
@@ -648,7 +716,60 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                مهام من نوع موافقات Approvals{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  تخصيص الرئيسية
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+              <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
+                <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
+                  <Check className="text-white" strokeWidth={3} size={14} />
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow className="flex justify-end w-[1200px] py-3 ">
+              <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  مهام من نوع موافقات Approvals
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 قريبًا
@@ -665,7 +786,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                الإشعارات{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  الإشعارات
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 <div className="bg-[#000000] w-6 h-6 flex items-center justify-center rounded-full p-1 group-hover:bg-white">
@@ -725,7 +860,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                تسجيل الدخول الموحّد SSO{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  تسجيل الدخول الموحّد SSO
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 __
@@ -827,7 +976,21 @@ export default function PackagesTables() {
             </TableRow>
             <TableRow className="flex justify-end w-[1200px] py-3 ">
               <TableCell className="w-[500px] font-normal text-base flex flex-col gap-1 items-start">
-                دعم فني مخصّص لحساب العميل{" "}
+                {" "}
+                <div className="my-auto text-sm flex items-center space-x-2 gap-2">
+                  دعم فني مخصّص لحساب العميل
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Info size={15} color="#2f2f30" className="" />
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black text-white p-2 rounded-md text-xs max-w-[230px] text-right">
+                        إدارة مساحة العمل وتعديل الهوية المخصصة لها مثل الشعار
+                        والنصوص وغيرها...
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
               </TableCell>
               <TableCell className="w-[213px] font-normal text-sm flex flex-col gap-1 items-center">
                 __
