@@ -1,13 +1,18 @@
 "use client";
 import React from "react";
-import PageHeader from "../../components/PageHeader";
-import backHeader from "../assets/bg-header.png";
+import PageHeader from "../../../components/PageHeader";
+import backHeader from "../../assets/bg-header.png";
 import Packages from "./_components/Packages";
 import Partners from "./_components/Partners";
 import Questions from "./_components/Questions";
 import PackagesWebTables from "./_components/PackagesWebTables";
 import PackagesMobileTables from "./_components/PackagesMobileTables";
+import { useTranslations } from "next-intl";
+
+
 export default function Pricing() {
+  const t = useTranslations("PricingPage");
+
   return (
     <div
       className="bg-no-repeat bg-top"
@@ -15,8 +20,8 @@ export default function Pricing() {
       dir="rtl"
     >
       <PageHeader
-        title="الأسعار والباقات"
-        description="خطط وباقات* مرنة تنمو معك وتساعدك تنجز المزيد بما هو أقل وتصل إلى أهدافك أسرع مع مدير."
+        title={t("title")}
+        description={t("content")}
       />
       <Packages />
       <div>

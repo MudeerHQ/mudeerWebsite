@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import PackageCard from "../_components/PackagesCard";
-import bgPackage from "../../assets/bg-package.jpg";
+import PackageCard from "./PackagesCard";
+import bgPackage from "../../../assets/bg-package.jpg";
 import { ArrowLeft } from "lucide-react";
 
 export default function Packages() {

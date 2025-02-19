@@ -2,14 +2,14 @@
 import { ArrowLeft } from "lucide-react";
 import React from "react";
 import Image from "next/image";
-import partener1 from "../../assets/partener1.png";
-import partener2 from "../../assets/partener2.png";
-import partener3 from "../../assets/partener3.png";
-import partener4 from "../../assets/partener4.png";
-import partener5 from "../../assets/partener5.png";
-import partener6 from "../../assets/partener6.png";
-import partener7 from "../../assets/partener7.png";
-import partener8 from "../../assets/partener8.png";
+import partener1 from "../../../assets/partener1.png";
+import partener2 from "../../../assets/partener2.png";
+import partener3 from "../../../assets/partener3.png";
+import partener4 from "../../../assets/partener4.png";
+import partener5 from "../../../assets/partener5.png";
+import partener6 from "../../../assets/partener6.png";
+import partener7 from "../../../assets/partener7.png";
+import partener8 from "../../../assets/partener8.png";
 
 export default function Partners() {
   const partners = [

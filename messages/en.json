@@ -1,0 +1,10 @@
+{
+  "PricingPage": {
+    "title": "Packages and Prices",
+    "content": "Flexible plans and packages* that grow with you and help you accomplish more and reach your goals faster with a manager."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {العربية} en {English} other {Unknown}}"
+  }
+}
