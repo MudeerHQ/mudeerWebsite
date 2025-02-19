@@ -10,7 +10,7 @@ export default function Questions() {
   return (
     <div className="px-6 md:px-12 lg:px-20 grid gap-10 md:grid-cols-1 lg:grid-cols-[1fr_2fr] mt-40 mb-32">
       {/* Left Section */}
-      <div className="flex flex-col gap-3 text-center ">
+      <div className="flex flex-col gap-3 ">
         <span className="font-semibold text-3xl md:text-5xl lg:text-6xl text-[#0D0D0D]">
           الأسئلة المتكررة
         </span>

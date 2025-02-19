@@ -61,11 +61,12 @@ export default function Packages() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 px-6 sm:px-10 md:px-20 lg:px-60 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-14 px-6 sm:px-10 md:px-20 lg:px-60 mb-10">
         {packages.map((pkg, index) => (
-          <PackageCard key={index} {...pkg} />
+          <PackageCard key={index} {...pkg} isSecond={index === 1} />
         ))}
       </div>
+
       <div className="flex flex-col gap-4 justify-center items-center mb-10 text-center px-4">
         <span className="text-[#504f4f] text-xs sm:text-sm font-normal">
           ✦ سنطلقها قريبًا. تواصل معنا للوصول المبكر.
@@ -80,7 +81,7 @@ export default function Packages() {
         <div className="flex flex-col md:flex-row justify-between items-center px-6 py-6 md:px-[30px] md:py-[35px] bg-[#FFFFFF66] rounded-[20px] md:rounded-[30px] shadow-md">
           {/* Text Section */}
           <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto text-center md:text-right">
-            <div className="border-l-[2px] md:border-l-2 border-[rgba(13, 13, 13, .15)] pl-4 font-semibold text-lg md:text-xl">
+            <div className="border-l-[2px] md:border-l-2 border-[rgba(13, 13, 13, .15)] pl-4 font-semibold text-lg md:text-xl max-md:border-none">
               الأعمال الكبيرة
             </div>
             <div className="font-normal text-sm sm:text-base text-[#504f4f] md:w-[60%]">

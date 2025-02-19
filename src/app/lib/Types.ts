@@ -10,4 +10,5 @@ export interface PackageCardProps {
   headFeature: string;
   features: string[];
   bgImage: string;
+  isSecond: boolean
 }

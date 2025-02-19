@@ -453,7 +453,7 @@ export default function PackagesMobileTables() {
             <div className="grid grid-cols-[40%_15%_15%_15%_15%] gap-[2px] py-3">
               <div className="my-auto text-sm flex items-center space-x-2 gap-2">
                 الإحصاءات والتقارير
-                <TooltipProvider>
+                <TooltipProvider delayDuration={0}>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Info size={15} color="#2f2f30" className="" />
