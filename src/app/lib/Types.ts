@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface PageHeaderProps {
   title: string;
   description: string;
@@ -10,5 +12,11 @@ export interface PackageCardProps {
   headFeature: string;
   features: string[];
   bgImage: string;
-  isSecond: boolean
+  isSecond: boolean;
+}
+
+export interface BlogCardProps {
+  img: StaticImageData;
+  title: string;
+  description: string;
 }
