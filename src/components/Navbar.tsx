@@ -3,6 +3,8 @@
 import Image from "next/image";
 import logoArabic from "./../app/assets/logo-ar.png";
 import { ArrowLeft, ChevronDown } from "lucide-react";
+import { Link } from "../../navigation";
+import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Navbar() {
   return (
@@ -28,10 +30,14 @@ export default function Navbar() {
             <ChevronDown size={18} />
           </li>
           <li className="text-base font-semibold cursor-pointer"> الأعمال </li>
+          <Link href ="/pricing">
+
           <li className="text-base font-semibold cursor-pointer">الأسعار</li>
+          </Link>
         </ul>
       </div>
       <div className="flex ">
+        <LocaleSwitcher />
         <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
           تسجيل الدخول
         </div>

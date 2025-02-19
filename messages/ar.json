@@ -1,0 +1,10 @@
+{
+    "PricingPage": {
+        "title": "الأسعار والباقات",
+        "content": "خطط وباقات* مرنة تنمو معك وتساعدك تنجز المزيد بما هو أقل وتصل إلى أهدافك أسرع مع مدير."
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, ar {العربية} en {English} other {Unknown}}"
+      }
+}
