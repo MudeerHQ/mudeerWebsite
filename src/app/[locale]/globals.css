@@ -44,9 +44,17 @@
   background: transparent; /* Transparent track */
 }
 
-/* Infinite scrolling animation */
 @layer utilities {
-  @keyframes scroll {
+  @keyframes scroll-ltr {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll-rtl {
     0% {
       transform: translateX(0);
     }
@@ -54,10 +62,16 @@
       transform: translateX(100%);
     }
   }
-  .animate-scroll {
-    animation: scroll 25s linear infinite;
+
+  .animate-scroll-ltr {
+    animation: scroll-ltr 25s linear infinite;
+  }
+
+  .animate-scroll-rtl {
+    animation: scroll-rtl 25s linear infinite;
   }
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
