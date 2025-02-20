@@ -3,8 +3,8 @@
 import Image from "next/image";
 import logoArabic from "./../app/assets/logo-ar.png";
 import { ArrowLeft, ChevronDown } from "lucide-react";
-import { Link } from "../../navigation";
 import LocaleSwitcher from "./LocaleSwitcher";
+import { Link } from "@/i18n/routing";
 
 export default function Navbar() {
   return (

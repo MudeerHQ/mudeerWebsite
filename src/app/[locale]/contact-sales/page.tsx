@@ -1,7 +1,7 @@
 "use client";
 
-export default function ContactSales() {
-  return (
-    <div className="">Contact Sales</div>
-  );
+export default function ContactSalesClient() {
+
+
+  return <div>Contact Sales</div>;
 }

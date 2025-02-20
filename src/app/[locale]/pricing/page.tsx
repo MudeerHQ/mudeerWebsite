@@ -1,4 +1,4 @@
-"use client";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import PageHeader from "../../../components/PageHeader";
 import backHeader from "../../assets/bg-header.png";
@@ -12,7 +12,6 @@ import { useTranslations } from "next-intl";
 
 export default function Pricing() {
   const t = useTranslations("PricingPage");
-
   return (
     <div
       className="bg-no-repeat bg-top"
