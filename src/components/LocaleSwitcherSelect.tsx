@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import clsx from 'clsx';
 import {useParams} from 'next/navigation';
 import {ChangeEvent, ReactNode, useTransition} from 'react';
-import {Locale, usePathname, useRouter} from '../../i18n/routing';
+import { usePathname, useRouter} from '../i18n/routing';
 
 type Props = {
   children: ReactNode;
@@ -22,7 +23,7 @@ export default function LocaleSwitcherSelect({
   const params = useParams();
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = event.target.value as Locale;
+    const nextLocale = event.target.value as any;
     startTransition(() => {
       router.replace(
         // @ts-expect-error -- TypeScript will validate that only known `params`
