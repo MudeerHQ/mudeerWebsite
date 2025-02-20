@@ -4,12 +4,15 @@ import Image from "next/image";
 import logoArabic from "./../app/assets/logo-ar.png";
 import { ArrowLeft, ChevronDown } from "lucide-react";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 
 export default function Navbar() {
+  const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <div
-      className="fixed top-4 right-0 z-50 flex justify-between items-center mt-4 mx-24 rounded-xl bg-[#FFFFFFD9] px-6 py-2 border border-[#F4F4F5] w-[85%]"
+      className="fixed top-4 right-0 z-50 flex justify-between items-center mt-4 mx-24 rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%]"
       dir="rtl"
     >
       <div>
@@ -29,10 +32,23 @@ export default function Navbar() {
             المعرفة
             <ChevronDown size={18} />
           </li>
-          <li className="text-base font-semibold cursor-pointer"> الأعمال </li>
-          <Link href ="/pricing">
-
-          <li className="text-base font-semibold cursor-pointer">الأسعار</li>
+          <Link href="/blog">
+            <li
+              className={`text-base font-semibold cursor-pointer ${
+                pathname.startsWith("/blog") ? "text-[#CCAD00]" : ""
+              }`}
+            >
+              الأعمال
+            </li>
+          </Link>
+          <Link href="/pricing">
+            <li
+              className={`text-base font-semibold cursor-pointer ${
+                pathname.startsWith("/pricing") ? "text-[#CCAD00]" : ""
+              }`}
+            >
+              الأسعار
+            </li>
           </Link>
         </ul>
       </div>

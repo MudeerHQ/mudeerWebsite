@@ -17,11 +17,11 @@ import blog9 from "../../assets/blog9.png";
 import blog10 from "../../assets/blog10.png";
 import blog11 from "../../assets/blog11.png";
 import blog12 from "../../assets/blog12.png";
-
+import { Link } from "@/i18n/routing";
 
 export default function Blog() {
   return (
-    <div className="px-12" dir="rtl">
+    <div className="px-[100px] grid justify-center" dir="rtl">
       <PageHeader title="المدونة" description="" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center">
         <div>
@@ -60,42 +60,47 @@ export default function Blog() {
       </div>
       <hr />
       <div className="my-20">
-        <div className="flex sm:flex-row justify-between mb-4 px-4 sm:pl-12">
-          <span className="text-xl sm:text-[26px] font-semibold">
-            أفضل الممارسات
-          </span>
-          <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-            عرض الجميع <ArrowLeft />
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <BlogCard
-            img={blog4}
-            title="تقديم أكثر شمولاً تجارب مدير"
-            description="29 ديسمبر، 2024"
-          />
-          <BlogCard
-            img={blog5}
-            title="تقديم أكثر شمولاً تجارب مدير"
-            description="29 ديسمبر، 2024"
-          />
-          <BlogCard
-            img={blog6}
-            title="تقديم أكثر شمولاً تجارب مدير"
-            description="29 ديسمبر، 2024"
-          />
+        <div className="">
+          <div className="flex sm:flex-row justify-between mb-4 px-4">
+            <span className="text-xl sm:text-[26px] font-semibold">
+              أفضل الممارسات
+            </span>
+            <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
+              عرض الجميع <ArrowLeft />
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <BlogCard
+              img={blog4}
+              title="تقديم أكثر شمولاً تجارب مدير"
+              description="29 ديسمبر، 2024"
+            />
+            <BlogCard
+              img={blog5}
+              title="تقديم أكثر شمولاً تجارب مدير"
+              description="29 ديسمبر، 2024"
+            />
+            <BlogCard
+              img={blog6}
+              title="تقديم أكثر شمولاً تجارب مدير"
+              description="29 ديسمبر، 2024"
+            />
+          </div>
         </div>
       </div>
 
       <div className="my-20">
-        <div className="flex sm:flex-row justify-between mb-4 px-4 sm:pl-12">
+        <div className="flex sm:flex-row justify-between mb-4 px-4">
           <span className="text-xl sm:text-[26px] font-semibold">
-          آخر التحديثات
+            آخر التحديثات
           </span>
-          <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
+          <Link href="/blog/release-notes" >
+          <span
+            className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer"
+          >
             عرض الجميع <ArrowLeft />
           </span>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -118,9 +123,9 @@ export default function Blog() {
       </div>
 
       <div className="my-20">
-        <div className="flex sm:flex-row justify-between mb-4 px-4 sm:pl-12">
+        <div className="flex sm:flex-row justify-between mb-4 px-4">
           <span className="text-xl sm:text-[26px] font-semibold">
-          خلف الكواليس
+            خلف الكواليس
           </span>
           <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
             عرض الجميع <ArrowLeft />
