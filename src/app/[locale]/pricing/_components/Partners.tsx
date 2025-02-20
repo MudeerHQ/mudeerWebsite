@@ -10,6 +10,7 @@ import partener5 from "../../../assets/partener5.png";
 import partener6 from "../../../assets/partener6.png";
 import partener7 from "../../../assets/partener7.png";
 import partener8 from "../../../assets/partener8.png";
+import { useLocale } from "next-intl";
 
 export default function Partners() {
   const partners = [
@@ -54,6 +55,7 @@ export default function Partners() {
     partener7,
     partener8,
   ];
+  const locale = useLocale();
 
   return (
     <div className="flex flex-col gap-16 mb-10  ">
@@ -100,7 +102,7 @@ export default function Partners() {
 
         {/* Scrolling Partners Section */}
         <div className="overflow-hidden w-full relative mt-6">
-          <div className="flex whitespace-nowrap py-4 relative animate-scroll">
+        <div className={`flex whitespace-nowrap ${locale === "ar" ? "animate-scroll-rtl" : "animate-scroll-ltr"}`}>
             {partners.concat(partners).map((partner, index) => (
               <div key={index} className="flex-shrink-0 mx-3">
                 <Image
