@@ -54,17 +54,17 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        " flex flex-1 items-center justify-between py-4 text-xl max-sm:text-sm font-semibold transition-all hover:underline text-right"
+        " flex flex-1 items-center gap-4 py-4 text-xl max-sm:text-sm font-semibold transition-all  text-right"
       )}
       {...props}
     >
-      {children}
       {/* Show Plus when closed, Minus when open */}
       {isOpen ? (
-        <Minus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+        <Minus color="#0D0D0D" className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300" />
       ) : (
-        <Plus className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300" />
+        <Plus color="#0D0D0D" className="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-300" />
       )}
+      {children}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
