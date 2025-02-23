@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../../app/globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { NextIntlClientProvider } from "next-intl";
@@ -80,6 +80,7 @@ export default async function LocaleLayout({
           bg-[#F5F5F4]`}
         >
           <Navbar />
+          {/* <NavigationMenuDemo /> */}
           {children}
           <Footer />
         </body>
