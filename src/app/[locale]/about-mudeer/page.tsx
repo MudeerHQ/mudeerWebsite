@@ -4,6 +4,7 @@ import { useLocale } from "next-intl";
 import AboutHeader from "./_component/AboutHeader";
 import MudeerStory from "./_component/AboutStory";
 import AboutVision from "./_component/AboutVision";
+import AboutValues from "./_component/AboutValues";
 
 export default function ContactSales() {
   const locale = useLocale();
@@ -16,6 +17,7 @@ export default function ContactSales() {
       <AboutHeader />
       <MudeerStory />
       <AboutVision />
+      <AboutValues />
     </div>
   );
 }
