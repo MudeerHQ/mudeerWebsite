@@ -5,6 +5,7 @@ import AboutHeader from "./_component/AboutHeader";
 import MudeerStory from "./_component/AboutStory";
 import AboutVision from "./_component/AboutVision";
 import AboutValues from "./_component/AboutValues";
+import AboutFooter from "./_component/AboutFooter";
 
 export default function ContactSales() {
   const locale = useLocale();
@@ -18,6 +19,7 @@ export default function ContactSales() {
       <MudeerStory />
       <AboutVision />
       <AboutValues />
+      <AboutFooter />
     </div>
   );
 }

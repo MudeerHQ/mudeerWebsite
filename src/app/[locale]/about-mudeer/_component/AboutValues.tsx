@@ -58,24 +58,29 @@ export default function AboutValues() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto min-h-[1550px] -mt-16 bg-[linear-gradient(to_bottom,#F8DCCC_0%,theme(colors.stone.100)_0%)] rounded-t-[100px] overflow-hidden max-sm:pb-20"
+      className="h-auto min-h-[1750px] max-md:min-h-[1850px]  -mt-16 bg-[linear-gradient(to_bottom,#F8DCCC_0%,theme(colors.stone.100)_0%)] rounded-t-[100px] overflow-hidden max-sm:pb-20"
     >
       <div className="h-auto bg-[linear-gradient(to_bottom,#F8DCCC_0%,theme(colors.stone.100)_35%)]">
-        <div className="w-11/12 md:w-3/4 mx-auto flex flex-col items-center gap-8 py-16 md:py-36 text-center">
-          <h2 className="text-3xl md:text-[40px] font-semibold text-[#0D0D0D] leading-tight">
-            نُعيد تعريف مفهوم العمل والتعاون بين الفرق
-          </h2>
-          <p className="text-lg md:text-xl font-normal text-[#3F3F46] leading-relaxed w-[50%] max-md:w-[90%]">
-            أشخاص مبدعين، وشغوفين، ومؤمنين بقوة العمل الجماعي والتعاون يعملوا
-            ليلًا نهارًا على بناء حلول لمشاكل حقيقية...
-          </p>
-          <button className="text-sm font-semibold text-white rounded-[10px] bg-[#141414F5] px-3 py-2 flex items-center gap-3 cursor-pointer">
-            <span>انضم الآن</span>
-            <ArrowLeft
-              size={12}
-              className="group-hover:hidden transition-opacity duration-200"
-            />
-          </button>
+        <div className=" py-16 md:py-36 text-center relative">
+          <div className="w-1/2 mx-auto flex flex-col items-center gap-8 relative">
+            <h2 className="text-3xl md:text-[40px] font-semibold text-[#0D0D0D] leading-tight z-20">
+              نُعيد تعريف مفهوم العمل والتعاون بين الفرق
+            </h2>
+            <p className="text-lg md:text-xl font-normal text-[#3F3F46] leading-relaxed w-[50%] max-md:w-[90%]">
+              أشخاص مبدعين، وشغوفين، ومؤمنين بقوة العمل الجماعي والتعاون يعملوا
+              ليلًا نهارًا على بناء حلول لمشاكل حقيقية...
+            </p>
+            <button className="text-sm font-semibold text-white rounded-[10px] bg-[#141414F5] px-3 py-2 flex items-center gap-3 cursor-pointer">
+              <span>انضم الآن</span>
+              <ArrowLeft
+                size={12}
+                className="group-hover:hidden transition-opacity duration-200"
+              />
+            </button>
+
+            {/* Yellow circle positioned at top-left under the text */}
+            <span className="absolute -top-4 left-8 w-[100px] h-[100px] bg-yellow-400 rounded-full z-10"></span>
+          </div>
         </div>
 
         <div className="flex flex-col items-center mt-5 mb-10 text-center">
@@ -87,7 +92,7 @@ export default function AboutValues() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-4 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-4 md:px-20 md:mb-48 max-md:mb-40 max-sm:mb-24">
           {values.map(({ img, title, desc }, index) => (
             <div
               key={index}
