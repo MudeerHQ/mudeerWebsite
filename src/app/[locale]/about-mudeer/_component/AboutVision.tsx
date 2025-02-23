@@ -10,7 +10,7 @@ export default function AboutVision() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="flex flex-col gap-16 lg:gap-24 bg-center bg-contain bg-no-repeat bg-[#09090B] h-auto min-h-[800px] lg:min-h-[1250px] -mt-24 rounded-t-[50px] lg:rounded-t-[100px] overflow-hidden py-16 lg:py-[200px] px-8"
+      className="flex flex-col gap-16 lg:gap-24 bg-center bg-contain bg-no-repeat bg-[#09090B] h-auto min-h-[900px] lg:min-h-[1250px] -mt-24 rounded-t-[50px] lg:rounded-t-[100px] overflow-hidden py-16 lg:py-[200px] px-8"
       style={{
         backgroundImage: `url(${backVision.src})`,
         backgroundPosition: `center top`,
