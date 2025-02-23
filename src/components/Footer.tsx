@@ -7,7 +7,7 @@ import logoFooter from "./../app/assets/logo-footer.png";
 export default function Footer() {
   return (
     <div
-      className="h-auto pt-[100px] md:pt-[240px] pb-[80px] rounded-t-[60px] bg-[#09090B] bg-top bg-no-repeat flex flex-col justify-center items-center gap-20 max-sm:gap-0"
+      className=" overflow-hidden h-auto pt-[100px] md:pt-[240px] pb-[80px] rounded-t-[60px] bg-[#09090B] bg-top bg-no-repeat flex flex-col justify-center items-center gap-20 max-sm:gap-0"
       style={{ backgroundImage: `url(${backFooter.src})` }}
       dir="rtl"
     >

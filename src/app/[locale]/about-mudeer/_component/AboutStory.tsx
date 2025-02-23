@@ -35,7 +35,7 @@ export default function AboutStory() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 md:px-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 md:px-14 md:mb-48 max-md:mb-40 max-sm:mb-24">
           {[
             {
               img: shape1,
