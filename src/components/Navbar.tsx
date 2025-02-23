@@ -3,13 +3,15 @@
 import Image from "next/image";
 import logoArabic from "./../app/assets/logo-ar.png";
 import { ArrowLeft, ChevronDown } from "lucide-react";
-import LocaleSwitcher from "./LocaleSwitcher";
 import { Link, usePathname } from "@/i18n/routing";
+import LocaleSwitcherWrapper from "./LocaleSwitcherWrapper";
+import { useParams } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
   console.log(pathname);
-
+  const params = useParams();
+  const currentLocale = (params.locale as "en" | "ar") || "ar";
   return (
     <div
       className="fixed top-4 right-0 z-50 flex justify-between items-center mt-4 mx-24 rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%]"
@@ -53,8 +55,8 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex ">
-        <LocaleSwitcher />
-        <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
+      <LocaleSwitcherWrapper currentLocale={currentLocale} label="Switch Language" />
+      <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
           تسجيل الدخول
         </div>
         <div className="group w-[150px] relative flex justify-center items-center gap-2 text-[#FFFFFF] bg-[#141414F5] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300">

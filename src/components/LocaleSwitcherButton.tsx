@@ -65,10 +65,10 @@
 
 "use client";
 
-import { useTransition } from "react";
+import { useTransition, useState, useEffect } from "react";
 import { usePathname, useRouter } from "../i18n/routing";
 import { Globe } from "lucide-react";
-import { useSearchParams } from "next/navigation"; // ✅ Use search params instead of params
+import { useSearchParams } from "next/navigation";
 import { routing } from "../i18n/routing";
 
 type Locale = "en" | "ar";
@@ -82,10 +82,16 @@ export default function LocaleSwitcherButton({ currentLocale, label }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  const searchParams = useSearchParams(); // ✅ Get current search parameters
+  const searchParams = useSearchParams(); // 🚨 Causes issue when used directly
+
+  const [queryParams, setQueryParams] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    setQueryParams(Object.fromEntries(searchParams.entries())); // ✅ Store query params safely
+  }, [searchParams]);
 
   function toggleLanguage() {
-    const locales: Locale[] = [...routing.locales] as Locale[]; 
+    const locales: Locale[] = [...routing.locales] as Locale[];
     const currentIndex = locales.indexOf(currentLocale);
     const nextLocale = locales[(currentIndex + 1) % locales.length];
 
@@ -93,7 +99,7 @@ export default function LocaleSwitcherButton({ currentLocale, label }: Props) {
       router.replace(
         {
           pathname,
-          query: Object.fromEntries(searchParams.entries()), // ✅ Preserve existing query params
+          query: queryParams, // ✅ Uses stored query params
         },
         { locale: nextLocale }
       );

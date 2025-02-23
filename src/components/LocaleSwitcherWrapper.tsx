@@ -19,15 +19,21 @@
 // }
 
 
-import { useLocale, useTranslations } from "next-intl";
-import LocaleSwitcherButton from "./LocaleSwitcherButton";
+"use client";
 
-type Locale = "en" | "ar"; // Ensure correct type
+import { Suspense } from "react";
+import LocaleSwitcherButton from "./LocaleSwitcherButton"; // Ensure the correct import path
 
-export default function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
-  const locale = useLocale() as Locale; // ✅ Fix: Cast `locale` to `Locale`
-
-  return <LocaleSwitcherButton currentLocale={locale} label={t("label")} />;
+export default function LocaleSwitcherWrapper({
+  currentLocale,
+  label,
+}: {
+  currentLocale: "en" | "ar";
+  label: string;
+}) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LocaleSwitcherButton currentLocale={currentLocale} label={label} />
+    </Suspense>
+  );
 }
-
