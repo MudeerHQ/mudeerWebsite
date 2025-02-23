@@ -1,3 +1,4 @@
+import React from "react"; 
 import Image from "next/image";
 import aboutImg from "../../../assets/about-img.png";
 import { useLocale } from "next-intl";
@@ -60,7 +61,7 @@ export default function AboutHeader() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="bg-bottom bg-contain bg-no-repeat overflow-hidden mb-28"
+      className="bg-bottom bg-contain bg-no-repeat overflow-hidden mb-80 max-sm:mb-28"
       style={{
         backgroundImage: `url(${backAbout.src})`,
         backgroundPosition: `center calc(1rem)`,
@@ -92,7 +93,7 @@ export default function AboutHeader() {
         </div>
 
         {/* Scrolling Partners Section */}
-        <div className="overflow-hidden w-full relative mt-6">
+        <div className="overflow-hidden w-full relative mt-10">
           <div
             className={`flex whitespace-nowrap ${
               locale === "ar" ? "animate-scroll-rtl" : "animate-scroll-ltr"
