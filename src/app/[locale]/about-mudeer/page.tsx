@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useLocale } from "next-intl";
-import AboutHeader from "./_component/AboutHeader";
-import MudeerStory from "./_component/AboutStory";
-import AboutVision from "./_component/AboutVision";
-import AboutValues from "./_component/AboutValues";
-import AboutFooter from "./_component/AboutFooter";
+import AboutHeader from "./_components/AboutHeader";
+import MudeerStory from "./_components/AboutStory";
+import AboutVision from "./_components/AboutVision";
+import AboutValues from "./_components/AboutValues";
+import AboutFooter from "./_components/AboutFooter";
 
 export default function ContactSales() {
   const locale = useLocale();
