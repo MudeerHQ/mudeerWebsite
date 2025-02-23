@@ -52,6 +52,15 @@ export default function Navbar() {
               الأسعار
             </li>
           </Link>
+          <Link href="/about-mudeer">
+            <li
+              className={`text-base font-semibold cursor-pointer ${
+                pathname.startsWith("/about-mudeer") ? "text-[#CCAD00]" : ""
+              }`}
+            >
+              عن مدير
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="flex ">
