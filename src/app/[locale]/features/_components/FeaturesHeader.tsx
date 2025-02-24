@@ -65,7 +65,7 @@ export default function FeaturesHeader() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="bg-bottom bg-contain bg-no-repeat overflow-hidden "
+      className="bg-bottom bg-contain bg-no-repeat overflow-hidden pb-32"
       style={{
         backgroundImage: `url(${backFeatures.src})`,
         backgroundPosition: `center calc(15rem)`,
