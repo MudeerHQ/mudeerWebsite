@@ -10,9 +10,24 @@
     "title7": "Sign in",
     "title8": "Sign up Free",
     "li1":"Projects",
-    "li2":"Reporting",
+    "li2":"Files",
     "li3":"My Tasks",
-    "li4":"Goals"
+    "li4":"Goals",
+    "li5": "Mudeer Brain AI",
+    "li6": "Custom Fields",
+    "li7": "Canvas",
+    "li8": "Inbox",
+    "li9": "Mudeer Dashboard",
+    "li10": "Reporting",
+    "li11": "Project Management",
+    "li12": "Operations",
+    "li13": "Marketing",
+    "li14": "Leaders",
+    "li15": "Human Resources",
+    "li16": "Blog",
+    "li17": "Release Notes",
+    "li18": "Help Center"
+
   },
   "PricingPage": {
     "title": "Packages and Prices",
