@@ -64,8 +64,11 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex ">
-      <LocaleSwitcherWrapper currentLocale={currentLocale} label="Switch Language" />
-      <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
+        <LocaleSwitcherWrapper
+          currentLocale={currentLocale}
+          label="Switch Language"
+        />
+        <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
           تسجيل الدخول
         </div>
         <div className="group w-[150px] relative flex justify-center items-center gap-2 text-[#FFFFFF] bg-[#141414F5] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300">
