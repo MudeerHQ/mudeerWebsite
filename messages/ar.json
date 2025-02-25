@@ -1,10 +1,25 @@
 {
-    "PricingPage": {
-        "title": "الأسعار والباقات",
-        "content": "خطط وباقات* مرنة تنمو معك وتساعدك تنجز المزيد بما هو أقل وتصل إلى أهدافك أسرع مع مدير."
-    },
-    "LocaleSwitcher": {
-        "label": "Change language",
-        "locale": "{locale, select, ar {العربية} en {English} other {Unknown}}"
-      }
+  "Navbar": {
+    "logo":"مدير",
+    "title1":"الميزات",
+    "title2":"الحلول",
+    "title3":"المعرفة",
+    "title4":"الأعمال",
+    "title5":"الأسعار",
+    "title6":"عن مدير",
+    "title7":"تسجيل الدخول",
+    "title8":"جرّب مدير مجانًا",
+    "li1":"المشاريع",
+    "li2":"التقارير",
+    "li3":"مهامي",
+    "li4":"الأهداف"
+  },
+  "PricingPage": {
+    "title": "الأسعار والباقات",
+    "content": "خطط وباقات* مرنة تنمو معك وتساعدك تنجز المزيد بما هو أقل وتصل إلى أهدافك أسرع مع مدير."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {العربية} en {English} other {Unknown}}"
+  }
 }

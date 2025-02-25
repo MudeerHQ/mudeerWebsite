@@ -1,4 +1,19 @@
 {
+  "Navbar": {
+    "logo":"Mudeer",
+    "title1": "Features",
+    "title2": "Solutions",
+    "title3": "Resources",
+    "title4": "Enterprise",
+    "title5": "Pricing",
+    "title6": "About Mudeer",
+    "title7": "Sign in",
+    "title8": "Sign up Free",
+    "li1":"Projects",
+    "li2":"Reporting",
+    "li3":"My Tasks",
+    "li4":"Goals"
+  },
   "PricingPage": {
     "title": "Packages and Prices",
     "content": "Flexible plans and packages* that grow with you and help you accomplish more and reach your goals faster with a manager."

@@ -2,12 +2,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../../app/globals.css";
-import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import { NavigationMenuDemo } from "@/components/NavigationMenuDemo";
 
 const DINNextUltraLight = localFont({
   src: "../font/GraphikArabic-Extralight.ttf",
@@ -79,8 +79,8 @@ export default async function LocaleLayout({
           ${DINNextHeavy.variable}
           bg-[#F5F5F4]`}
         >
-          <Navbar />
-          {/* <NavigationMenuDemo /> */}
+          {/* <Navbar /> */}
+          <NavigationMenuDemo />
           {children}
           <Footer />
         </body>
