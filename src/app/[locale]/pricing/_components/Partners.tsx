@@ -102,7 +102,11 @@ export default function Partners() {
 
         {/* Scrolling Partners Section */}
         <div className="overflow-hidden w-full relative mt-6">
-        <div className={`flex whitespace-nowrap ${locale === "ar" ? "animate-scroll-rtl" : "animate-scroll-ltr"}`}>
+          <div
+            className={`flex whitespace-nowrap ${
+              locale === "ar" ? "animate-scroll-rtl" : "animate-scroll-ltr"
+            }`}
+          >
             {partners.concat(partners).map((partner, index) => (
               <div key={index} className="flex-shrink-0 mx-3">
                 <Image

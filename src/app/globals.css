@@ -144,3 +144,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.animate-blink {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
