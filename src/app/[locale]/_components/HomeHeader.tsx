@@ -64,7 +64,6 @@ export default function HomeHeader() {
     "أهدافك...",
     "عملك...",
     "مهامك...",
-    "أدواتك...",
     "فريقك...",
   ];
   const typingSpeed = 50; // Speed of typing (ms per character)
@@ -107,10 +106,10 @@ export default function HomeHeader() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className=" overflow-hidden mb-20 max-sm:mb-28"
+      className=" overflow-hidden mb-40 max-sm:mb-28"
     >
       <div className="flex flex-col justify-center items-center gap-16 max-sm:gap-8 pt-[140px] sm:pt-[140px] md:pt-[180px] pb-[80px] sm:pb-[80px] md:pb-[100px] px-4 ">
-        <div className="grid gap-8">
+        <div className="grid gap-12">
           <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[96px] text-[#0D0D0D] text-center">
             منصة واحدة لكل
           </h1>
