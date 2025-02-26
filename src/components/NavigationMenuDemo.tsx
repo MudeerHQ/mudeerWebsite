@@ -545,21 +545,21 @@ export function NavigationMenuDemo() {
                                   stroke="#010101"
                                   strokeWidth="2"
                                   strokeLinecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinejoin="round"
                                 />
                                 <path
                                   d="M20.5612 10.222C21.0933 11.8621 21.1431 13.6206 20.7046 15.2883C20.2661 16.9559 19.3578 18.4624 18.0877 19.6287C16.8177 20.7949 15.2393 21.5718 13.5404 21.8668C11.8415 22.1619 10.0936 21.9627 8.50473 21.2929C6.91581 20.6232 5.55272 19.5111 4.57766 18.0889C3.60259 16.6668 3.05658 14.9945 3.00458 13.2709C2.95259 11.5474 3.3968 9.84522 4.28437 8.36689C5.17194 6.88856 6.46551 5.69632 8.01117 4.93201"
                                   stroke="#010101"
                                   strokeWidth="2"
                                   strokeLinecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinejoin="round"
                                 />
                                 <path
                                   d="M8.0019 9.99701C7.5008 10.664 7.17458 11.4458 7.05294 12.2712C6.93131 13.0966 7.01813 13.9392 7.3055 14.7225C7.59287 15.5057 8.07165 16.2045 8.69822 16.7554C9.3248 17.3062 10.0792 17.6915 10.8928 17.8762C11.7064 18.0608 12.5533 18.039 13.3562 17.8126C14.1592 17.5862 14.8928 17.1625 15.4901 16.5801C16.0874 15.9977 16.5295 15.275 16.7761 14.478C17.0227 13.681 17.0659 12.835 16.9019 12.017"
                                   stroke="#010101"
                                   strokeWidth="2"
                                   strokeLinecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinejoin="round"
                                 />
                               </svg>
                             </div>
@@ -892,14 +892,14 @@ export function NavigationMenuDemo() {
                                   stroke="#010101"
                                   strokeWidth="2"
                                   strokeLinecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinejoin="round"
                                 />
                                 <path
                                   d="M21.2099 16.18C20.5737 17.6845 19.5787 19.0102 18.3118 20.0413C17.0449 21.0724 15.5447 21.7774 13.9424 22.0948C12.34 22.4121 10.6843 22.3321 9.12006 21.8618C7.55578 21.3914 6.13054 20.5451 4.96893 19.3967C3.80733 18.2482 2.94473 16.8327 2.45655 15.2739C1.96837 13.7151 1.86948 12.0605 2.16851 10.4546C2.46755 8.84878 3.15541 7.34062 4.17196 6.06202C5.18851 4.78343 6.5028 3.77331 7.99992 3.12"
                                   stroke="#010101"
                                   strokeWidth="2"
                                   strokeLinecap="round"
-                                  stroke-linejoin="round"
+                                  strokeLinejoin="round"
                                 />
                               </svg>
                             </div>
@@ -990,7 +990,7 @@ export function NavigationMenuDemo() {
                           stroke="#09090B"
                           strokeWidth="1.33333"
                           strokeLinecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
@@ -1020,7 +1020,7 @@ export function NavigationMenuDemo() {
                           stroke="#09090B"
                           strokeWidth="1.33333"
                           strokeLinecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
@@ -1050,7 +1050,7 @@ export function NavigationMenuDemo() {
                           stroke="#09090B"
                           strokeWidth="1.33333"
                           strokeLinecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
@@ -1080,7 +1080,7 @@ export function NavigationMenuDemo() {
                           stroke="#09090B"
                           strokeWidth="1.33333"
                           strokeLinecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
@@ -1364,21 +1364,21 @@ export function NavigationMenuDemo() {
                               stroke="#010101"
                               strokeWidth="2"
                               strokeLinecap="round"
-                              stroke-linejoin="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M20.5612 10.222C21.0933 11.8621 21.1431 13.6206 20.7046 15.2883C20.2661 16.9559 19.3578 18.4624 18.0877 19.6287C16.8177 20.7949 15.2393 21.5718 13.5404 21.8668C11.8415 22.1619 10.0936 21.9627 8.50473 21.2929C6.91581 20.6232 5.55272 19.5111 4.57766 18.0889C3.60259 16.6668 3.05658 14.9945 3.00458 13.2709C2.95259 11.5474 3.3968 9.84522 4.28437 8.36689C5.17194 6.88856 6.46551 5.69632 8.01117 4.93201"
                               stroke="#010101"
                               strokeWidth="2"
                               strokeLinecap="round"
-                              stroke-linejoin="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M8.0019 9.99701C7.5008 10.664 7.17458 11.4458 7.05294 12.2712C6.93131 13.0966 7.01813 13.9392 7.3055 14.7225C7.59287 15.5057 8.07165 16.2045 8.69822 16.7554C9.3248 17.3062 10.0792 17.6915 10.8928 17.8762C11.7064 18.0608 12.5533 18.039 13.3562 17.8126C14.1592 17.5862 14.8928 17.1625 15.4901 16.5801C16.0874 15.9977 16.5295 15.275 16.7761 14.478C17.0227 13.681 17.0659 12.835 16.9019 12.017"
                               stroke="#010101"
                               strokeWidth="2"
                               strokeLinecap="round"
-                              stroke-linejoin="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
                         </div>
@@ -1711,14 +1711,14 @@ export function NavigationMenuDemo() {
                               stroke="#010101"
                               strokeWidth="2"
                               strokeLinecap="round"
-                              stroke-linejoin="round"
+                              strokeLinejoin="round"
                             />
                             <path
                               d="M21.2099 16.18C20.5737 17.6845 19.5787 19.0102 18.3118 20.0413C17.0449 21.0724 15.5447 21.7774 13.9424 22.0948C12.34 22.4121 10.6843 22.3321 9.12006 21.8618C7.55578 21.3914 6.13054 20.5451 4.96893 19.3967C3.80733 18.2482 2.94473 16.8327 2.45655 15.2739C1.96837 13.7151 1.86948 12.0605 2.16851 10.4546C2.46755 8.84878 3.15541 7.34062 4.17196 6.06202C5.18851 4.78343 6.5028 3.77331 7.99992 3.12"
                               stroke="#010101"
                               strokeWidth="2"
                               strokeLinecap="round"
-                              stroke-linejoin="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
                         </div>
@@ -1819,7 +1819,7 @@ export function NavigationMenuDemo() {
                         stroke="#09090B"
                         strokeWidth="1.33333"
                         strokeLinecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -1849,7 +1849,7 @@ export function NavigationMenuDemo() {
                         stroke="#09090B"
                         strokeWidth="1.33333"
                         strokeLinecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -1879,7 +1879,7 @@ export function NavigationMenuDemo() {
                         stroke="#09090B"
                         strokeWidth="1.33333"
                         strokeLinecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
@@ -1906,7 +1906,7 @@ export function NavigationMenuDemo() {
                         stroke="#09090B"
                         strokeWidth="1.33333"
                         strokeLinecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                       />
                     </svg>
                   </div>
