@@ -206,7 +206,7 @@ export default function HomeMissions() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto min-h-[1750px] max-md:min-h-[1850px] -mt-16 bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_0%)] rounded-t-[100px] max-md:rounded-t-[50px] overflow-hidden max-sm:pb-20"
+      className="h-auto min-h-[1750px] max-md:min-h-[1850px] -mt-16 bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_0%)] rounded-t-[100px] max-md:rounded-t-[50px] overflow-hidden pb-32 max-sm:pb-52"
     >
       <div className="h-auto bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_35%)]">
         <div className=" pt-16 md:pt-28 text-center relative">
