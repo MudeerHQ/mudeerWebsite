@@ -32,10 +32,10 @@ export default function HomeWays() {
           إدارة العمل كما يجب أن تكون— بسيطة، وذكية، ومتكاملة.{" "}
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-6 px-6 md:px-6 lg:px-10">
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden">
+      <div className="flex flex-col justify-center items-center gap-8 w-[80%] m-auto">
+        <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+          <div className="flex flex-col gap-4 justify-between">
+            <div className="flex flex-col gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8  overflow-hidden">
               <div className="pl-6 md:pl-8 text-center md:text-start">
                 <span className="font-medium text-[17px] text-[#FFFFFF] leading-[24px]">
                   الأهداف. خطط، نفّذ وحقق المزيد. {" "}
@@ -46,13 +46,13 @@ export default function HomeWays() {
                   الهدف النهائي.{" "}
                 </span>
               </div>
-              <div className="flex justify-center">
-                <Image src={way1} alt="way-1" className="w-full md:w-auto" />
+              <div className="">
+                <Image src={way1} alt="way-1" className="w-full" />
               </div>
             </div>
 
             <div
-              className="flex flex-col gap-4 border border-[#71717A] rounded-3xl pt-6  max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden"
+              className="flex flex-col gap-4 border border-[#71717A] rounded-3xl pt-6  overflow-hidden"
               style={{
                 background:
                   "linear-gradient(-50deg, rgba(88, 112, 176, 0.5) 0%, rgba(55, 55, 55, 0.5) 26%)",
@@ -68,11 +68,11 @@ export default function HomeWays() {
                 </span>
               </div>
               <div className="flex justify-center pr-8">
-                <Image src={way2} alt="way-2" className="w-full md:w-auto" />
+                <Image src={way2} alt="way-2" className="w-full" />
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden">
+          <div className=" flex flex-col gap-4 justify-between bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 overflow-hidden">
             <div className="pl-6 md:pl-8 text-center md:text-start">
               <span className="font-medium text-[17px] text-[#FFFFFF] leading-[24px]">
                 الكانفاس. مساحة لكل فكرة، ولكل نقاش.{" "}
@@ -84,14 +84,14 @@ export default function HomeWays() {
               </span>
             </div>
             <div className="flex justify-center md:justify-end">
-              <Image src={way3} alt="way-3" className="w-full md:w-auto" />
+              <Image src={way3} alt="way-3" className="w-full" />
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-6 lg:px-10">
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
           <div
-            className="flex flex-col gap-4 border border-[#71717A] rounded-3xl py-6 pt-8 max-w-full lg:max-w-[340px] min-h-[345px] overflow-hidden px-8"
+            className="flex flex-col gap-4 border border-[#71717A] rounded-3xl py-6 pt-8  overflow-hidden px-8"
             style={{
               background:
                 "linear-gradient(242deg, rgba(88, 112, 176, 0.5) 0%, rgba(55, 55, 55, 0.5) 26%)",
@@ -110,12 +110,12 @@ export default function HomeWays() {
               <Image
                 src={way4}
                 alt="way-4"
-                className="w-full md:w-auto h-auto"
+                className="w-full"
               />
             </div>
           </div>
 
-          <div className="flex flex-col justify-end gap-4 border border-[#71717A] rounded-3xl max-w-full lg:max-w-[340px] min-h-[345px] overflow-hidden">
+          <div className="flex flex-col justify-end gap-4 border border-[#71717A] rounded-3xl overflow-hidden pt-4">
             <div className="flex flex-col text-center md:text-start px-6 md:px-8">
               <span className="font-medium text-[17px] text-[#FFFFFF] leading-[24px]">
                 الملفات. منظّمة وفي متناول يدك دائمًا.
@@ -129,13 +129,13 @@ export default function HomeWays() {
               <Image
                 src={way5}
                 alt="way-5"
-                className="w-full md:w-auto h-auto"
+                className="w-full"
               />
             </div>
           </div>
 
           <div
-            className="flex flex-col justify-end gap-4 border border-[#71717A] rounded-3xl max-w-full lg:max-w-[340px] min-h-[345px] overflow-hidden"
+            className="flex flex-col justify-end gap-4 border border-[#71717A] rounded-3xl overflow-hidden pt-4"
             style={{
               background:
                 "linear-gradient(166deg, #c339a16b 0%, rgba(55, 55, 55, 0.5) 26%)",
@@ -154,7 +154,7 @@ export default function HomeWays() {
               <Image
                 src={way6}
                 alt="way-6"
-                className="w-full md:w-auto h-auto"
+                className="w-full"
               />
             </div>
           </div>
