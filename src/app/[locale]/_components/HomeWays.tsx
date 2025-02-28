@@ -14,7 +14,7 @@ export default function HomeWays() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto -mt-32 bg-[#1A1919] pt-10 rounded-t-[100px] overflow-hidden pb-32 max-sm:rounded-t-[50px]"
+      className="h-auto -mt-32 bg-[#1A1919] pt-10 rounded-t-[100px] overflow-hidden pb-56 max-sm:rounded-t-[50px]"
     >
       <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3">
         <div className="py-[6px] px-4 rounded-full bg-[#335FFF] flex justify-center items-center gap-2">
