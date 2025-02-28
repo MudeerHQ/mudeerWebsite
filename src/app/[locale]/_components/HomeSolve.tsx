@@ -1,131 +1,187 @@
-import React, { useRef, useEffect } from "react";
+"use client";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper"; // Import SwiperType for typing
-import { ArrowLeft } from "lucide-react";
-import slider1 from "../../../app/assets/slider1.png";
-import slider2 from "../../../app/assets/slider2.png";
-import slider3 from "../../../app/assets/slider3.png";
-import slider4 from "../../../app/ assets/slider4.png";
+import slider1 from "../../../app/assets/solve1.png";
+import slider2 from "../../../app/assets/solve2.png";
+import slider3 from "../../../app/assets/solve3.png";
 import Image from "next/image";
+import { useLocale } from "next-intl";
 
-const SectionsSlider = () => {
+const HomeSolve = () => {
   const swiperRef = useRef<SwiperType | null>(null); // Explicitly define the ref type
-
+  const locale = useLocale();
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.update(); // Call update() properly
     }
   }, []);
 
+  const [activeTab, setActiveTab] = useState("teams"); // Default tab
+
+  const teamsSlides = [
+    {
+      img: slider1,
+      title: "الموارد البشرية",
+      subTitle: "إدارة الفرق والمواهب",
+      description:
+        "إدارة التوظيف من خلال تتبع المتقدمين، وجدولة المقابلات، ومتابعة قرارات التعيين، مع تحليلات الأداء وأتمتة عمليات التقييم الدورية وتنظيم الملفات.",
+    },
+    {
+      img: slider1,
+      title: "إدارة المشاريع",
+      subTitle: "مواردك في مكان واحد",
+      description:
+        "تخطيط المشاريع، وإدارة الأولويات، وتوزيع المهام، وتتبع التقدّم، مع تقارير ذكية، مما يسهّل اتخاذ القرارات وتحقيق الأهداف بسرعة.",
+    },
+    {
+      img: slider2,
+      title: "التسويق",
+      subTitle: "خطّط، نفّذ، وانشر",
+      description:
+        "إدارة الحملات من البداية إلى النهاية، وتتبع الأداء والفريق والموارد، مع مركزية الملفات والمناقشات في مكان واحد، والتكامل مع أدواتك المفضّلة.",
+    },
+    {
+      img: slider3,
+      title: "العمليات والأعمال",
+      subTitle: "تشغيل أكثر كفاءة ووضوح",
+      description:
+        "تشغيل أكثر كفاءة ووضوح. تخطيط شامل، مع أتمتة العمليات المتكررة لتقليل الأخطاء وتسريع الإنجاز، وضمان تحرك الفرق نحو الأهداف المحددة.",
+    },
+    {
+      img: slider1,
+      title: "المبيعات",
+      subTitle: "تابع، حلّل، وأغلق الصفقات بسرعة.",
+      description:
+        "أدوات المتابعة، وإدارة بيانات العملاء، وتحليلات ذكية تساعدك على اتخاذ قرارات أسرع، وتوزيع المهام بين فريق المبيعات والتكامل مع CRM.",
+    },
+    {
+      img: slider1,
+      title: "المنتجات",
+      subTitle: "فكّر، ابنِ، وأطلق",
+      description:
+        "دعم المنهجيات الشائعة مثل Agile، وتخصيص لوحات كانبان، وأتمتة سير العمل بين الفرق المختلفة لتسريع الابتكار والتطوير.",
+    },
+  ];
+
+  const industriesSlides = [
+    {
+      img: slider2,
+      title: "التجزئة",
+      subTitle: "إدارة المخزون، والفروع، والمبيعات",
+      description:
+        "تنسيق عمليات البيع والمخزون بين الفروع المختلفة، وتحليل أداء المبيعات في الوقت الفعلي، مع أدوات تساعدك على تحسين تجربة العملاء واتخاذ قرارات مدروسة بناءً على بيانات صحيحة.",
+    },
+    {
+      img: slider3,
+      title: "التعليم",
+      subTitle: "إدارة الفرق والبرامج بمرونة",
+      description:
+        "تنظيم المحتوى التعليمي، ومتابعة الخطط الدراسية، والتنسيق بين الفرق الأكاديمية بسهولة، مع أدوات جدولة، وتتبع الأداء، وأتمتة العمليات الإدارية لضمان تجربة تعليمية أكثر كفاءة.",
+    },
+    {
+      img: slider1,
+      title: "الإعلام",
+      subTitle: "تنظيم، وتعاون، وتسليم المشاريع",
+      description:
+        "تخطيط وجدولة وإدارة الإنتاج الإعلامي، والتنسيق بين الفرق الإبداعية، مع أدوات تتبع المواعيد النهائية، وضبط العمليات لضمان جودة وسرعة تسليم المشاريع الإعلامية.",
+    },
+    {
+      img: slider1,
+      title: "الإنتاج",
+      subTitle: "تحسين الكفاءة التشغيلية وتقليل الأخطاء",
+      description:
+        "تتبع عمليات الإنتاج في الوقت الفعلي، وتوزيع المهام بين الفرق، وضبط العمليات التشغيلية بشكل أكثر كفاءة، مع تحليلات ذكية تساعدك على تحسين الإنتاجية وتقليل الهدر وضبط الجودة.",
+    },
+  ];
+
+  const slidesToShow = activeTab === "teams" ? teamsSlides : industriesSlides;
+
   return (
-    <div className=" pr-8 max-sm:pr-0 flex flex-col gap-8 mb-[100px] max-lg:mb-[30px] max-lg:-mt-[60px]">
-      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-32 pb-10 pl-3">
-        <div className="text-[#0D0D0D] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
-          غيّر الطريقة التي يعمل بها فريقك.
-        </div>
-        <div className="text-[#0D0D0D] font-light text-2xl sm:text-3xl md:text-4xl lg:text-[50px]">
-          مع مدير
-        </div>
+    <div
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className="h-auto -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[100px] overflow-hidden pb-56 max-sm:rounded-t-[50px]"
+    >
+      {" "}
+      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-12 pb-10 pl-3">
         <div className="text-[#0D0D0D] font-light text-lg sm:text-xl md:text-2xl leading-relaxed">
-          إدارة العمل كما يجب أن تكون— تجربة بسيطة، ذكية، ومتكاملة.
+          الحلول{" "}
+        </div>
+        <div className="text-[#0D0D0D] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
+          كيف تستخدم مدير؟{" "}
+        </div>
+
+        <div className="text-[#0D0D0D] font-light text-lg sm:text-xl md:text-2xl leading-relaxed">
+          حلول لكل فريق، في أي مجال{" "}
         </div>
       </div>
-
-      <div className="relative pl-0">
+      <div className="m-auto flex items-center justify-center rounded-[14px] gap-4 border-2 border-[#FFFFFF99] p-[6px] w-fit">
+        <span
+          className={`cursor-pointer text-sm font-semibold transition-all duration-300 ${
+            activeTab === "teams"
+              ? "text-black px-[10px] py-[7px] bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
+              : "text-gray-500"
+          }`}
+          onClick={() => setActiveTab("teams")}
+        >
+          فرق العمل
+        </span>
+        <span
+          className={`cursor-pointer text-sm font-semibold transition-all duration-300 ${
+            activeTab === "industries"
+              ? "text-black px-[10px] py-[7px] bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
+              : "text-gray-500"
+          }`}
+          onClick={() => setActiveTab("industries")}
+        >
+          الصناعات
+        </span>
+      </div>
+      <div className="relative mt-10 pl-0">
         <Swiper
           ref={(el) => {
             if (el) swiperRef.current = el.swiper;
           }}
           loop={true}
-          slidesPerView="auto" // Allow custom width per slide
-          spaceBetween={20} // Set gap between slides
+          slidesPerView="auto"
+          spaceBetween={20}
           modules={[Pagination, Autoplay, Navigation]}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           speed={1000}
           breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
+            640: { slidesPerView: 3, spaceBetween: 20 },
             768: { slidesPerView: 3, spaceBetween: 20 },
-            1024: { slidesPerView: 4, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
           }}
           className="mySwiper"
         >
-          {[
-            {
-              img: slider1,
-              title: "الأهداف",
-              subTitle: "خطط، نفّذ وحقق المزيد.",
-              description:
-                "حدّد المراحل الأساسية لمشاريعك، وتابع التقدم الحقيقي، وأبقِ الجميع على نفس المسار، ليصبح كل إنجاز نقطة تحفيز تقرّبك من الهدف النهائي.",
-            },
-            {
-              img: slider2,
-              title: "الملفات",
-              subTitle: "منظّمة وفي متناول يدك دائمًا.",
-              description:
-                "لا مزيد من البحث في الإيميلات والمحادثات—احتفظ بكل مستنداتك في مكان واحد، وشاركها بأمان مع فريقك، حتى تصل إلى ما تحتاجه في أي لحظة.",
-            },
-            {
-              img: slider3,
-              title: "الكانفاس",
-              subTitle: "مساحة لكل فكرة، ولكل نقاش.",
-              description:
-                "المحادثات وحدها لا تكفي. الفرق تحتاج إلى مساحة مرنة ومفتوحة للنقاش، وتوليد الأفكار، والتخطيط، والتعاون، والقرارات لتحويل الأفكار إلى واقع.",
-            },
-            {
-              img: slider4,
-              title: "الإشعارات",
-              subTitle: "مصمّمة للأفراد. لتركيز أعلى.",
-              description:
-                "ابقَ على اطلاع دون إزعاج—تحكَّم في الإشعارات التي تصلك، اختر ما هو مهم، وأوقف التنبيهات غير الضرورية، لا مزيد من التشتيت.",
-            },
-            {
-              img: slider2,
-              title: "الملفات",
-              subTitle: "منظّمة وفي متناول يدك دائمًا.",
-              description:
-                "لا مزيد من البحث في الإيميلات والمحادثات—احتفظ بكل مستنداتك في مكان واحد، وشاركها بأمان مع فريقك، حتى تصل إلى ما تحتاجه في أي لحظة.",
-            },
-            {
-              img: slider3,
-              title: "الكانفاس",
-              subTitle: "مساحة لكل فكرة، ولكل نقاش.",
-              description:
-                "المحادثات وحدها لا تكفي. الفرق تحتاج إلى مساحة مرنة ومفتوحة للنقاش، وتوليد الأفكار، والتخطيط، والتعاون، والقرارات لتحويل الأفكار إلى واقع.",
-            },
-          ].map((goal, index) => (
+          {slidesToShow.map((goal, index) => (
             <SwiperSlide
               key={index}
-              style={{ width: "400px", height: "500px", margin: "0 100px" }}
+              style={{ width: "400px", height: "500px", margin: "0 20px" }}
             >
-              {" "}
-              {/* Set width for each slide */}
-              <div
-                className="rounded-[30px] bg-[#FFFFFF] w-[350px] h-[420px] px-[30px] pt-12 pb-4 flex flex-col justify-start items-start gap-4 my-2"
-                style={{
-                  boxShadow: "0px 2px 5px 0px rgba(0,0,0,0.24)",
-                }}
-              >
-                <div className="flex flex-col gap-4 mb-10">
-                  <div>
-                    <Image src={goal.img} alt={goal.title} />
+              <div className="flex flex-col gap-6 max-sm:w-[350px] m-auto">
+                <div
+                  className="rounded-[30px] overflow-hidden"
+                >
+                  <Image src={goal.img} alt={goal.title} className="w-full"  />
+                </div>
+                <div className="flex flex-col gap-7">
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xl font-semibold tex-[#0D0D0D]">
+                      {goal.title}
+                    </span>
+                    <span className="text-base font-medium text-[#0D0D0D]">
+                      {goal.subTitle}
+                    </span>
                   </div>
-                  <div className="text-[25px] font-semibold text-[#0D0D0D]">
-                    {goal.title}
-                  </div>
-                  <div className="text-[17px] font-semibold text-[#302e2e]">
-                    {goal.subTitle}
-                  </div>
-                  <div className="text-[17px] font-normal text-[#383838] w-[90%] leading-[25px]">
+                  <div className="text-base font-light text-[#3f3e3e] leading-[25.2px] w-[85%]">
                     {goal.description}
                   </div>
-                </div>
-                <div className="cursor-pointer flex items-center justify-start gap-2 text-[#0D0D0D] font-semibold text-base">
-                  اعرف المزيد
-                  <ArrowLeft />
                 </div>
               </div>
             </SwiperSlide>
@@ -136,4 +192,4 @@ const SectionsSlider = () => {
   );
 };
 
-export default SectionsSlider;
+export default HomeSolve;

@@ -57,7 +57,58 @@ function Card({
       {/* Left Section */}
       <div className="flex flex-col gap-4 max-md:p-12">
         <div className="grid gap-3">
-          <h2 className="font-medium text-base text-[#0D0D0D]">{title}</h2>
+          <h2 className="font-medium text-base text-[#0D0D0D] flex items-center gap-2">
+            {title === "عقل مدير AI" && (
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.63752 0.360856C8.51717 -0.0532281 7.88464 -0.0532281 7.76429 0.360856L7.59462 0.947785C7.22773 2.21284 6.72722 3.2006 5.3662 3.54098L4.73421 3.69898C4.64038 3.71765 4.55592 3.76828 4.49523 3.84224C4.43454 3.9162 4.40137 4.00891 4.40137 4.10458C4.40137 4.20025 4.43454 4.29297 4.49523 4.36692C4.55592 4.44088 4.64038 4.49151 4.73421 4.51018L5.3662 4.66818C6.72722 5.0091 7.22773 5.99686 7.59462 7.26138L7.76429 7.84831C7.88464 8.26292 8.51717 8.26292 8.63752 7.84831L8.80719 7.26138C9.17408 5.99686 9.67512 5.0091 11.0361 4.66871L11.6671 4.51018C11.7609 4.49151 11.8454 4.44088 11.9061 4.36692C11.9667 4.29297 11.9999 4.20025 11.9999 4.10458C11.9999 4.00891 11.9667 3.9162 11.9061 3.84224C11.8454 3.76828 11.7609 3.71765 11.6671 3.69898L11.0361 3.54098C9.67512 3.2006 9.17408 2.21284 8.80719 0.948315L8.63752 0.360856Z"
+                  fill="url(#paint0_linear_6688_369)"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.39569 6.32491C3.32358 6.06618 2.94396 6.06618 2.87238 6.32491L2.77006 6.69181C2.55002 7.4818 2.24993 8.09948 1.4329 8.31262L1.05434 8.41124C0.997192 8.42466 0.946261 8.45699 0.909806 8.503C0.873352 8.549 0.853516 8.60598 0.853516 8.66467C0.853516 8.72337 0.873352 8.78035 0.909806 8.82635C0.946261 8.87236 0.997192 8.90469 1.05434 8.91811L1.4329 9.01726C2.2494 9.22986 2.55002 9.84754 2.77006 10.6375L2.87238 11.0044C2.94396 11.2637 3.32358 11.2637 3.39569 11.0044L3.49802 10.6375C3.71752 9.84754 4.01867 9.22986 4.83518 9.01726L5.21374 8.91811C5.27088 8.90469 5.32181 8.87236 5.35827 8.82635C5.39472 8.78035 5.41456 8.72337 5.41456 8.66467C5.41456 8.60598 5.39472 8.549 5.35827 8.503C5.32181 8.45699 5.27088 8.42466 5.21374 8.41124L4.83518 8.31262C4.01867 8.10001 3.71752 7.48233 3.49802 6.69181L3.39569 6.32491Z"
+                  fill="url(#paint1_linear_6688_369)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_6688_369"
+                    x1="8.13012"
+                    y1="8.05774"
+                    x2="12.0223"
+                    y2="0.273374"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF802B" />
+                    <stop offset="1" stop-color="#335FFF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_6688_369"
+                    x1="3.02243"
+                    y1="11.2192"
+                    x2="5.45551"
+                    y2="6.35354"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#2CC171" />
+                    <stop offset="1" stop-color="#0037FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            )}
+            {title}
+            {title === "عقل مدير AI" && (<div className="text-[#09090B] px-4 py-1 bg-[#FFD800] font-medium text-xs rounded-full">
+              *نسخة تجريبية
+            </div>)}
+          </h2>
           <h4 className="text-3xl md:text-4xl font-semibold text-[#0D0D0D]">
             {subTitle}
           </h4>
@@ -78,7 +129,7 @@ function Card({
           ))}
         </ul>
 
-        <div className="flex items-center gap-4 mt-6 md:mt-8">
+        <div className="flex items-center gap-4 mt-6 md:mt-8 p-3 hover:bg-[#FAFAFA] hover: hover:rounded-[16px] w-fit cursor-pointer">
           <span className="font-semibold text-sm text-[#0D0D0D]">
             جرّب مدير مجانًا
           </span>
