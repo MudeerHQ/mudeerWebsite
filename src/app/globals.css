@@ -6,6 +6,20 @@
   font-family: var(--font-regular);
 }
 
+
+:root {
+  --font-thin: "Graphik Arabic Thin", sans-serif;
+  --font-extralight: "Graphik Arabic Extralight", sans-serif;
+  --font-light: "Graphik Arabic Light", sans-serif;
+  --font-regular: "Graphik Arabic Regular", sans-serif;
+  --font-medium: "Graphik Arabic Medium", sans-serif;
+  --font-semibold: "Graphik Arabic Semibold", sans-serif;
+  --font-bold: "Graphik Arabic Bold", sans-serif;
+  --font-black: "Graphik Arabic Black", sans-serif;
+  --font-super: "Graphik Arabic Super", sans-serif;
+}
+
+
 /* Style the scrollbar */
 ::-webkit-scrollbar {
   width: 4px; /* Adjust the width of the scrollbar */
