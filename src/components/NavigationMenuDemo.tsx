@@ -15,7 +15,14 @@ import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 import LocaleSwitcherWrapper from "./LocaleSwitcherWrapper";
-import { ArrowLeft, ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+  X,
+} from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import backNavbar from "../app/assets/bg-navbar.png";
 
@@ -30,7 +37,7 @@ export function NavigationMenuDemo() {
 
   return (
     <div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[85%]"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[85%] max-md:px-4"
       dir={locale === "ar" ? "rtl" : "ltr"}
     >
       <Link href="/">
@@ -69,7 +76,7 @@ export function NavigationMenuDemo() {
               />
             </svg>
           </span>
-          <span className="text-[#010101] text-[26px] font-extrabold">
+          <span className="text-[#010101] text-[26px] font-extrabold max-[900px]:text-lg">
             {t("logo")}
           </span>
         </div>
@@ -1133,17 +1140,20 @@ export function NavigationMenuDemo() {
         </NavigationMenu>
       </div>
       <div className="flex items-center justify-center">
-        <LocaleSwitcherWrapper
-          currentLocale={currentLocale}
-          label="Switch Language"
-        />
-        <Link href="/login">
+        <div className="max-[900px]:hidden">
+          <LocaleSwitcherWrapper
+            currentLocale={currentLocale}
+            label="Switch Language"
+          />
+        </div>
+
+        <Link href="/login" className="max-[900px]:hidden">
           <div className="text-[#0D0D0D] py-2 px-3 font-semibold text-base cursor-pointer">
             {t("title7")}
           </div>
         </Link>
         <Link href="/create-account ">
-          <div className="group w-[150px] relative flex justify-center items-center gap-2 text-[#FFFFFF] bg-[#141414F5] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300">
+          <div className="group w-[150px] relative flex justify-center items-center gap-2 text-[#FFFFFF] bg-[#141414F5] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300 max-[900px]:text-xs max-[900px]:w-[120px]">
             {locale === "ar" ? (
               <ArrowLeft
                 color="#FFFFFF"
@@ -1174,7 +1184,9 @@ export function NavigationMenuDemo() {
           </div>
         </Link>
         <div
-          className="mx-4 max-[900px]:block hidden cursor-pointer relative w-8 h-8"
+          className={`${
+            locale == "ar" ? "mr-4" : "ml-4"
+          } max-[900px]:block hidden cursor-pointer relative w-8 h-8`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {/* Menu Icon */}
@@ -1193,18 +1205,26 @@ export function NavigationMenuDemo() {
         </div>
       </div>
       <div
-        className={`rounded-2xl absolute top-16 left-0 w-full bg-white transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible md:invisible" : "opacity-0 invisible"
+        className={`rounded-2xl absolute top-[3.4rem] left-0 w-full bg-white transition-opacity duration-300 ${
+          isOpen
+            ? "opacity-100 visible min-[900px]:invisible"
+            : "opacity-0 invisible"
         }`}
       >
-        <ul className="flex flex-col items-start py-8 px-16 gap-4 ">
+        <ul className="flex flex-col py-8 px-3 gap-4 ">
           <li className="relative group">
             <div className="flex justify-between items-center">
               <span className="block py-2 text-base font-semibold cursor-pointer">
                 {t("title1")}
               </span>
-              <span className="transition-transform duration-300 ease-in-out transform group-hover:rotate-180">
-                <ChevronDown />
+              <span
+                className={`transition-transform duration-300 ease-in-out transform ${
+                  locale == "ar"
+                    ? "group-hover:-rotate-90"
+                    : "group-hover:rotate-90"
+                }`}
+              >
+                {locale == "ar" ? <ChevronLeft /> : <ChevronRight />}
               </span>
             </div>
 
@@ -1214,7 +1234,7 @@ export function NavigationMenuDemo() {
                 dir={locale === "ar" ? "rtl" : "ltr"}
               >
                 <div className="flex flex-col gap-[20px]">
-                  <div className="grid grid-cols-[2fr_1.5fr] gap-6">
+                  <div className="grid grid-cols-1 gap-6 ">
                     <div className="flex flex-col gap-3">
                       <Link
                         href="/features/projects"
@@ -1495,7 +1515,7 @@ export function NavigationMenuDemo() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-6 grid grid-cols-[2fr_1.5fr] gap-6">
+                <div className="mt-6 grid grid-cols-1 gap-6">
                   <div className="flex flex-col gap-4">
                     <div>التعاون</div>
                     <div>
@@ -1742,184 +1762,125 @@ export function NavigationMenuDemo() {
               </div>
             </div>
           </li>
-          <li className="relative group">
-            <div className="flex justify-between items-center">
-              <span className="block py-2 text-base font-semibold cursor-pointer">
-                {t("title2")}
-              </span>
-              <span className="transition-transform duration-300 ease-in-out transform group-hover:rotate-180">
-                <ChevronDown />
-              </span>
-            </div>
-
-            {/* Submenu inside the main menu */}
-            <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-96 group-hover:opacity-100 w-full">
-              <ul
-                className="grid grid-cols-1 gap-5 w-[350px] p-[30px]"
-                dir={locale === "ar" ? "rtl" : "ltr"}
-              >
-                <Link href="/solutions/project-management">
-                  <li className="font-semibold text-base text-[#010101]">
-                    {t("li11")}
-                  </li>
-                </Link>
-                <Link href="/solutions/marketing ">
-                  <li className="font-semibold text-base text-[#010101]">
-                    {t("li13")}
-                  </li>
-                </Link>
-                <Link href="/solutions/operations">
-                  <li className="font-semibold text-base text-[#010101]">
-                    {t("li12")}
-                  </li>
-                </Link>
-                <Link href="/solutions/hr">
-                  <li className="font-semibold text-base text-[#010101]">
-                    {t("li15")}
-                  </li>
-                </Link>
-                <Link href="/solutions/leaders ">
-                  <li className="font-semibold text-base text-[#010101]">
-                    {t("li14")}
-                  </li>
-                </Link>
-              </ul>
-            </div>
+          <li>
+            <span className="block py-2  text-base font-semibold cursor-pointer">
+              {t("title2")}
+            </span>
           </li>
           <li className="relative group">
             <div className="flex justify-between items-center">
               <span className="block py-2 text-base font-semibold cursor-pointer">
                 {t("title3")}
               </span>
-              <span className="transition-transform duration-300 ease-in-out transform group-hover:rotate-180">
-                <ChevronDown />
+              <span
+                className={`transition-transform duration-300 ease-in-out transform ${
+                  locale == "ar"
+                    ? "group-hover:-rotate-90"
+                    : "group-hover:rotate-90"
+                }`}
+              >
+                {locale == "ar" ? <ChevronLeft /> : <ChevronRight />}
               </span>
             </div>
-
-            {/* Submenu inside the main menu */}
             <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-96 group-hover:opacity-100 ">
-              <ul
-                className="grid grid-cols-1 gap-5 w-[350px] p-[30px]"
-                dir={locale === "ar" ? "rtl" : "ltr"}
-              >
-                <Link
-                  href="/blog"
-                  className="flex justify-start items-start gap-4"
-                >
-                  <div>
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.5 11.6666C12.6667 10.8333 13.0833 10.25 13.75 9.58329C14.5833 8.83329 15 7.74996 15 6.66663C15 5.34054 14.4732 4.06877 13.5355 3.13109C12.5979 2.19341 11.3261 1.66663 10 1.66663C8.67392 1.66663 7.40215 2.19341 6.46447 3.13109C5.52678 4.06877 5 5.34054 5 6.66663C5 7.49996 5.16667 8.49996 6.25 9.58329C6.83333 10.1666 7.33333 10.8333 7.5 11.6666M7.5 15H12.5M8.33333 18.3333H11.6667"
-                        stroke="#09090B"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+              <div className="p-4 " dir={locale === "ar" ? "rtl" : "ltr"}>
+                <div className="flex flex-col gap-[20px]">
+                  <div className="grid grid-cols-1 gap-6 ">
+                    <div className="flex flex-col gap-3">
+                      <Link
+                        href="/blog"
+                        className="flex justify-start items-start gap-4"
+                      >
+                        <div>
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.5 11.6666C12.6667 10.8333 13.0833 10.25 13.75 9.58329C14.5833 8.83329 15 7.74996 15 6.66663C15 5.34054 14.4732 4.06877 13.5355 3.13109C12.5979 2.19341 11.3261 1.66663 10 1.66663C8.67392 1.66663 7.40215 2.19341 6.46447 3.13109C5.52678 4.06877 5 5.34054 5 6.66663C5 7.49996 5.16667 8.49996 6.25 9.58329C6.83333 10.1666 7.33333 10.8333 7.5 11.6666M7.5 15H12.5M8.33333 18.3333H11.6667"
+                              stroke="#09090B"
+                              strokeWidth="1.33333"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-base text-[#010101] font-semibold">
+                            {t("li16")}
+                          </span>
+                          <span className="text-base text-[#010101] font-light">
+                            نظّم، تابع، وأدرّ مشاريعك.{" "}
+                          </span>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/blog/release-notes"
+                        className="flex justify-start items-start gap-4"
+                      >
+                        <div>
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M8.55648 17.59C8.70276 17.8433 8.91316 18.0537 9.16651 18.2C9.41987 18.3462 9.70726 18.4232 9.99981 18.4232C10.2924 18.4232 10.5798 18.3462 10.8331 18.2C11.0865 18.0537 11.2969 17.8433 11.4431 17.59M12.4998 6.75663H17.4998M14.9998 4.25663V9.25663M16.6681 12.1433C16.8578 12.3957 17.0632 12.6359 17.2831 12.8625C17.3918 12.9819 17.4635 13.1304 17.4893 13.2898C17.5152 13.4492 17.4942 13.6127 17.4289 13.7604C17.3636 13.9081 17.2567 14.0336 17.1214 14.1217C16.986 14.2098 16.828 14.2567 16.6665 14.2566H3.33314C3.17164 14.2567 3.01361 14.2098 2.87826 14.1217C2.7429 14.0336 2.63606 13.9081 2.57074 13.7604C2.50541 13.6127 2.4844 13.4492 2.51028 13.2898C2.53615 13.1304 2.60779 12.9819 2.71648 12.8625C3.82481 11.72 4.99981 10.5058 4.99981 6.75663C4.99991 5.89912 5.22055 5.05604 5.64052 4.3084C6.0605 3.56077 6.6657 2.93372 7.39797 2.48749C8.13024 2.04127 8.96497 1.79087 9.82194 1.76037C10.6789 1.72986 11.5293 1.92027 12.2915 2.3133"
+                              stroke="#09090B"
+                              strokeWidth="1.33333"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-base text-[#010101] font-semibold">
+                            {t("li17")}
+                          </span>
+                          <span className="text-base text-[#010101] font-light">
+                            منظّمة وفي متناول يدك دائمًا.{" "}
+                          </span>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/help"
+                        className="flex justify-start items-start gap-4"
+                      >
+                        <div>
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M11.6668 1.85657V5.1899C11.6668 5.63193 11.8424 6.05585 12.155 6.36841C12.4675 6.68097 12.8915 6.85657 13.3335 6.85657H16.6668M8.3335 7.6899H6.66683M13.3335 11.0232H6.66683M13.3335 14.3566H6.66683M12.5002 1.85657H5.00016C4.55814 1.85657 4.13421 2.03216 3.82165 2.34472C3.50909 2.65728 3.3335 3.08121 3.3335 3.52323V16.8566C3.3335 17.2986 3.50909 17.7225 3.82165 18.0351C4.13421 18.3476 4.55814 18.5232 5.00016 18.5232H15.0002C15.4422 18.5232 15.8661 18.3476 16.1787 18.0351C16.4912 17.7225 16.6668 17.2986 16.6668 16.8566V6.02323L12.5002 1.85657Z"
+                              stroke="#09090B"
+                              strokeWidth="1.33333"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-base text-[#010101] font-semibold">
+                            {t("li18")}{" "}
+                          </span>
+                          <span className="text-base text-[#010101] font-light">
+                            مصمّمة للأفراد. لتركيز أعلى.{" "}
+                          </span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-base text-[#010101] font-semibold">
-                      {t("li16")}
-                    </span>
-                    <span className="text-base text-[#010101] font-light">
-                      نظّم، تابع، وأدرّ مشاريعك.{" "}
-                    </span>
-                  </div>
-                </Link>
-                <Link
-                  href="/blog/release-notes"
-                  className="flex justify-start items-start gap-4"
-                >
-                  <div>
-                    <svg
-                      width="20"
-                      height="21"
-                      viewBox="0 0 20 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.55648 17.59C8.70276 17.8433 8.91316 18.0537 9.16651 18.2C9.41987 18.3462 9.70726 18.4232 9.99981 18.4232C10.2924 18.4232 10.5798 18.3462 10.8331 18.2C11.0865 18.0537 11.2969 17.8433 11.4431 17.59M12.4998 6.75663H17.4998M14.9998 4.25663V9.25663M16.6681 12.1433C16.8578 12.3957 17.0632 12.6359 17.2831 12.8625C17.3918 12.9819 17.4635 13.1304 17.4893 13.2898C17.5152 13.4492 17.4942 13.6127 17.4289 13.7604C17.3636 13.9081 17.2567 14.0336 17.1214 14.1217C16.986 14.2098 16.828 14.2567 16.6665 14.2566H3.33314C3.17164 14.2567 3.01361 14.2098 2.87826 14.1217C2.7429 14.0336 2.63606 13.9081 2.57074 13.7604C2.50541 13.6127 2.4844 13.4492 2.51028 13.2898C2.53615 13.1304 2.60779 12.9819 2.71648 12.8625C3.82481 11.72 4.99981 10.5058 4.99981 6.75663C4.99991 5.89912 5.22055 5.05604 5.64052 4.3084C6.0605 3.56077 6.6657 2.93372 7.39797 2.48749C8.13024 2.04127 8.96497 1.79087 9.82194 1.76037C10.6789 1.72986 11.5293 1.92027 12.2915 2.3133"
-                        stroke="#09090B"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-base text-[#010101] font-semibold">
-                      {t("li17")}
-                    </span>
-                    <span className="text-base text-[#010101] font-light">
-                      منظّمة وفي متناول يدك دائمًا.{" "}
-                    </span>
-                  </div>
-                </Link>
-                <Link
-                  href="/help"
-                  className="flex justify-start items-start gap-4"
-                >
-                  <div>
-                    <svg
-                      width="20"
-                      height="21"
-                      viewBox="0 0 20 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.6668 1.85657V5.1899C11.6668 5.63193 11.8424 6.05585 12.155 6.36841C12.4675 6.68097 12.8915 6.85657 13.3335 6.85657H16.6668M8.3335 7.6899H6.66683M13.3335 11.0232H6.66683M13.3335 14.3566H6.66683M12.5002 1.85657H5.00016C4.55814 1.85657 4.13421 2.03216 3.82165 2.34472C3.50909 2.65728 3.3335 3.08121 3.3335 3.52323V16.8566C3.3335 17.2986 3.50909 17.7225 3.82165 18.0351C4.13421 18.3476 4.55814 18.5232 5.00016 18.5232H15.0002C15.4422 18.5232 15.8661 18.3476 16.1787 18.0351C16.4912 17.7225 16.6668 17.2986 16.6668 16.8566V6.02323L12.5002 1.85657Z"
-                        stroke="#09090B"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-base text-[#010101] font-semibold">
-                      {t("li18")}{" "}
-                    </span>
-                    <span className="text-base text-[#010101] font-light">
-                      مصمّمة للأفراد. لتركيز أعلى.{" "}
-                    </span>
-                  </div>
-                </Link>
-                <Link href="/" className="flex justify-start items-start gap-4">
-                  <div>
-                    <svg
-                      width="20"
-                      height="21"
-                      viewBox="0 0 20 21"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.6668 1.85657V5.1899C11.6668 5.63193 11.8424 6.05585 12.155 6.36841C12.4675 6.68097 12.8915 6.85657 13.3335 6.85657H16.6668M8.3335 7.6899H6.66683M13.3335 11.0232H6.66683M13.3335 14.3566H6.66683M12.5002 1.85657H5.00016C4.55814 1.85657 4.13421 2.03216 3.82165 2.34472C3.50909 2.65728 3.3335 3.08121 3.3335 3.52323V16.8566C3.3335 17.2986 3.50909 17.7225 3.82165 18.0351C4.13421 18.3476 4.55814 18.5232 5.00016 18.5232H15.0002C15.4422 18.5232 15.8661 18.3476 16.1787 18.0351C16.4912 17.7225 16.6668 17.2986 16.6668 16.8566V6.02323L12.5002 1.85657Z"
-                        stroke="#09090B"
-                        strokeWidth="1.33333"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="text-base text-[#010101] font-semibold">
-                      الكواليس{" "}
-                    </span>
-                    <span className="text-base text-[#010101] font-light">
-                      مصمّمة للأفراد. لتركيز أعلى.{" "}
-                    </span>
-                  </div>
-                </Link>
-              </ul>
+                </div>
+              </div>
             </div>
           </li>
           <li>
@@ -1938,6 +1899,27 @@ export function NavigationMenuDemo() {
             </span>
           </li>
         </ul>
+        <div className="py-4 px-3 flex flex-col gap-4">
+          <div
+            className={`flex items-center gap-2 ${
+              locale == "en" ? "" : ""
+            } px-3 `}
+            dir={locale === "en" ? "rtl" : "ltr"}
+          >
+            <LocaleSwitcherWrapper
+              currentLocale={currentLocale}
+              label="Switch Language"
+            />
+            <span className="font-semibold text-sm text-[#010101]">
+              {currentLocale === "ar" ? "English" : "العربية"}
+            </span>
+          </div>
+          <Link href="/login">
+            <div className="px-3 flex justify-center items-center w-full p-1 bg-transparent border border-[#71717A] text-[#0D0D0D] font-semibold text-base rounded-[6px] cursor-pointer">
+              {t("title7")}{" "}
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
