@@ -104,10 +104,10 @@ const HomeSolve = () => {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[100px] overflow-hidden pb-56 max-sm:rounded-t-[50px]"
+      className="h-auto -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[60px] overflow-hidden pb-64 max-sm:pb-40 max-sm:pt-0 max-sm:rounded-t-[30px]"
     >
       {" "}
-      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-12 pb-10 pl-3">
+      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-12 pb-14 pl-3">
         <div className="text-[#0D0D0D] font-light text-lg sm:text-xl md:text-2xl leading-relaxed">
           الحلول{" "}
         </div>
@@ -119,11 +119,11 @@ const HomeSolve = () => {
           حلول لكل فريق، في أي مجال{" "}
         </div>
       </div>
-      <div className="m-auto flex items-center justify-center rounded-[14px] gap-4 border-2 border-[#FFFFFF99] p-[6px] w-fit">
+      <div className="m-auto flex items-center justify-center rounded-[14px] gap-1 border-2 border-[#FFFFFF99] p-[6px] w-fit">
         <span
-          className={`cursor-pointer text-sm font-semibold transition-all duration-300 ${
+          className={`cursor-pointer text-sm font-semibold transition-all duration-300 px-[10px] py-[6px] ${
             activeTab === "teams"
-              ? "text-black px-[10px] py-[7px] bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
+              ? "text-black bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
               : "text-gray-500"
           }`}
           onClick={() => setActiveTab("teams")}
@@ -131,9 +131,9 @@ const HomeSolve = () => {
           فرق العمل
         </span>
         <span
-          className={`cursor-pointer text-sm font-semibold transition-all duration-300 ${
+          className={`cursor-pointer text-sm font-semibold transition-all duration-300 px-[10px] py-[6px] ${
             activeTab === "industries"
-              ? "text-black px-[10px] py-[7px] bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
+              ? "text-black bg-[#0D0D0D0F] rounded-[10px] transform scale-105"
               : "text-gray-500"
           }`}
           onClick={() => setActiveTab("industries")}
@@ -162,20 +162,18 @@ const HomeSolve = () => {
           {slidesToShow.map((goal, index) => (
             <SwiperSlide
               key={index}
-              style={{ width: "400px", height: "500px", margin: "0 20px" }}
+              style={{ width: "300px", margin: "0 15px" }}
             >
               <div className="flex flex-col gap-6 max-sm:w-[350px] m-auto">
-                <div
-                  className="rounded-[30px] overflow-hidden"
-                >
-                  <Image src={goal.img} alt={goal.title} className="w-full"  />
+                <div className="rounded-[30px] overflow-hidden">
+                  <Image src={goal.img} alt={goal.title} className="w-full" />
                 </div>
                 <div className="flex flex-col gap-7">
                   <div className="flex flex-col gap-2">
                     <span className="text-xl font-semibold tex-[#0D0D0D]">
                       {goal.title}
                     </span>
-                    <span className="text-base font-medium text-[#0D0D0D]">
+                    <span className="text-base font-semibold text-[#0D0D0D]">
                       {goal.subTitle}
                     </span>
                   </div>

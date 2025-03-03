@@ -7,7 +7,7 @@ export default function BlogCard({ img, title, description }: BlogCardProps) {
   return (
     <div
       dir="rtl"
-      className="flex flex-col justify-start gap-4 bg-white overflow-hidden rounded-[30px]  max-md:m-auto"
+      className="flex flex-col justify-start gap-4 bg-white overflow-hidden rounded-[30px] max-sm:w-[90%] max-md:m-auto"
     >
       <div>
         {" "}

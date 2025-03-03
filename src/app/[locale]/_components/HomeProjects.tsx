@@ -28,11 +28,11 @@ export default function HomeProjects() {
       {" "}
       <div
         dir={locale === "ar" ? "rtl" : "ltr"}
-        className="h-auto -mt-32 bg-[#1A1919] pt-10 rounded-t-[100px] overflow-hidden pb-12 max-sm:rounded-t-[50px]"
+        className="h-auto -mt-32 bg-[#1A1919] pt-10 rounded-t-[60px] overflow-hidden pb-12 max-sm:rounded-t-[30px]"
       >
-        <div className="flex flex-col justify-center items-center gap-8 pt-[50px]  pb-[60px] sm:pb-[80px] md:pb-[100px] px-4 ">
-          <div className="flex flex-col gap-12 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3">
-            <div className="py-[6px] px-4 rounded-full bg-[#00B252] flex justify-center items-center gap-2">
+        <div className="flex flex-col justify-center items-center gap-8 pt-[20px]  pb-[60px] sm:pb-[80px] md:pb-[100px] px-4 ">
+          <div className="flex flex-col gap-12 max-sm:gap-8 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3">
+            <div className="py-[6px] px-4 w-[150px] rounded-full bg-[#00B252] flex justify-center items-center gap-2">
               <span>
                 <ClipboardList size={20} color="#ffffff" strokeWidth={1.5} />
               </span>
@@ -43,7 +43,7 @@ export default function HomeProjects() {
             <div className="text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[50px] leading-tight">
               انجز أكثر. مع فريقك في مكان واحد.{" "}
             </div>
-            <div className="text-[#686767] font-normal text-2xl w-1/2 max-md:w-full m-auto leading-[30px]">
+            <div className="text-[#686767] font-normal text-2xl w-[55%] max-md:w-full m-auto leading-[30px]">
               لا مزيد من الفوضى والتنقل بين التطبيقات والأدوات المعقدة. نظّم
               مشاريعك وتابع مهام فريقك وتعاون بشكل أفضل وأكثر شفافية.{" "}
             </div>
@@ -52,7 +52,7 @@ export default function HomeProjects() {
             <Image src={projectsImg} alt="projects-img" />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px] max-md:gap-0  w-[90%] m-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px] max-md:gap-0 px-[100px] max-sm:px-0">
           <div className=" max-w-[380px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
             <div className="p-3  bg-[#FFFFFF1A] rounded-[10px] w-fit">
               <ListTodo size={20} color="#D4D4D8" strokeWidth={1.5} />
@@ -60,7 +60,7 @@ export default function HomeProjects() {
             <h3 className="font-semibold text-2xl text-[#FFFFFF]">
               قوائم المهام.
             </h3>
-            <p className="font-normal text-lg text-[#D4D4D8]">
+            <p className="font-normal text-lg text-[#FFFFFF80]">
               لا مزيد من المهام العشوائية. تتبع كل شيء بوضوح من خلال القوائم
               التي تساعدك على فرز الأولويات، وتوزيع المسؤوليات، وإدارة مشاريعك
               بكفاءة.{" "}
@@ -73,7 +73,7 @@ export default function HomeProjects() {
             <h3 className="font-semibold text-2xl text-[#FFFFFF]">
               لوحة العمل كانبان.
             </h3>
-            <p className="font-normal text-lg text-[#D4D4D8]">
+            <p className="font-normal text-lg text-[#FFFFFF80]">
               راقب تقدم المشاريع لحظيًا، وانقل المهام بسهولة بين المراحل، واجعل
               فريقك يعمل بسلاسة دون الحاجة لاجتماعات أو رسائل مملة.{" "}
             </p>
@@ -85,7 +85,7 @@ export default function HomeProjects() {
             <h3 className="font-semibold text-2xl text-[#FFFFFF]">
               التقويم التفاعلي.
             </h3>
-            <p className="font-normal text-lg text-[#D4D4D8]">
+            <p className="font-normal text-lg text-[#FFFFFF80]">
               اجمع المهام، والتذكيرات، والمواعيد في تقويم تفاعلي يعزز إنتاجية
               فريقك ويضمن تنفيذ المشاريع في وقتها.{" "}
             </p>
@@ -107,7 +107,7 @@ export default function HomeProjects() {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-32 max-md:mt-10">
           <div className="flex flex-col gap-12 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3">
             <div className="py-[6px] px-4 rounded-full bg-[#DB4F00] flex justify-center items-center gap-2">
               <span>
@@ -185,7 +185,7 @@ export default function HomeProjects() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-sm:gap-8">
           <BlogCard
             img={blog7}
             title="تقديم أكثر شمولاً تجارب مدير"

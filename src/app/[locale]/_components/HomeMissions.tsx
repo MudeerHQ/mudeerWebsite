@@ -53,10 +53,10 @@ function Card({
   const background = `linear-gradient(306deg, ${hue(hueA)}, ${hue(hueB)})`;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] items-center mt-8 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] items-center mt-16 max-sm:mt-4 gap-8 max-sm:gap-1">
       {/* Left Section */}
       <div className="flex flex-col gap-4 max-md:p-12">
-        <div className="grid gap-3">
+        <div className="grid gap-4">
           <h2 className="font-medium text-base text-[#0D0D0D] flex items-center gap-2">
             {title === "عقل مدير AI" && (
               <svg
@@ -105,11 +105,13 @@ function Card({
               </svg>
             )}
             {title}
-            {title === "عقل مدير AI" && (<div className="text-[#09090B] px-4 py-1 bg-[#FFD800] font-medium text-xs rounded-full">
-              *نسخة تجريبية
-            </div>)}
+            {title === "عقل مدير AI" && (
+              <div className="text-[#09090B] px-4 py-1 bg-[#FFD800] font-medium text-xs rounded-full">
+                *نسخة تجريبية
+              </div>
+            )}
           </h2>
-          <h4 className="text-3xl md:text-4xl font-semibold text-[#0D0D0D]">
+          <h4 className="text-xl  sm:text-2xl md:text-4xl font-semibold text-[#0D0D0D]">
             {subTitle}
           </h4>
         </div>
@@ -129,7 +131,7 @@ function Card({
           ))}
         </ul>
 
-        <div className="flex items-center gap-4 mt-6 md:mt-8 p-3 hover:bg-[#FAFAFA] hover: hover:rounded-[16px] w-fit cursor-pointer">
+        <div className="flex items-center gap-4 mt-4 md:mt-8 p-3 hover:bg-[#FAFAFA] hover: hover:rounded-[16px] w-fit cursor-pointer">
           <span className="font-semibold text-sm text-[#0D0D0D]">
             جرّب مدير مجانًا
           </span>
@@ -174,7 +176,7 @@ const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
 
 /** Styles */
 const container: React.CSSProperties = {
-  padding: "5rem",
+  padding: "4rem 5rem",
   width: "100%",
 };
 
@@ -257,15 +259,15 @@ export default function HomeMissions() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto min-h-[1750px] max-md:min-h-[1850px] -mt-16 bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_0%)] rounded-t-[100px] max-md:rounded-t-[50px] overflow-hidden pb-32 max-md:pb-56"
+      className="h-auto min-h-[1750px] max-md:min-h-[1850px] -mt-16 bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_0%)] rounded-t-[60px] max-md:rounded-t-[30px] overflow-hidden pb-32 max-md:pb-56"
     >
-      <div className="h-auto bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_35%)]">
+      <div className="h-auto bg-[linear-gradient(to_bottom,#99AFFF_0%,theme(colors.stone.100)_100%)]">
         <div className=" pt-16 md:pt-28 text-center relative">
           <div className="w-full max-w-[90%] md:max-w-[80%] lg:max-w-[50%] mx-auto flex flex-col items-center gap-6 md:gap-8 text-center relative">
-            <h2 className="text-xl sm:text-2xl md:text-[36px] lg:text-[40px] font-semibold text-[#0D0D0D] !leading-[60.63px] z-20">
+            <h2 className="text-xl sm:text-2xl md:text-[36px] lg:text-[40px] font-semibold text-[#0D0D0D] !leading-[60.63px] max-sm:!leading-[30px] z-20">
               مشاريعك، وأهدافك، وعملك، وفريقك. في مكان واحد مع مدير.
             </h2>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 lg:gap-8">
+            <div className="flex flex-wrap sm:flex-row justify-center items-center gap-4 sm:gap-6 lg:gap-8">
               <div className="flex items-center gap-3">
                 <div>
                   <svg
