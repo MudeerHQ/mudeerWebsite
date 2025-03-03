@@ -14,10 +14,10 @@ export default function HomeWays() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto -mt-32 bg-[#1A1919] pt-10 rounded-t-[100px] overflow-hidden pb-56 max-sm:rounded-t-[50px]"
+      className="h-auto -mt-32 bg-[#1A1919] pt-12 rounded-t-[60px] overflow-hidden pb-56 max-sm:rounded-t-[30px]"
     >
-      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3">
-        <div className="py-[6px] px-4 rounded-full bg-[#335FFF] flex justify-center items-center gap-2">
+      <div className="flex flex-col gap-8 justify-center items-center px-4 text-center pt-12 max-sm:pt-6 pb-10 pl-3 max-sm:gap-4">
+        <div className="py-[6px] px-5 w-[150px] rounded-full bg-[#335FFF] flex justify-center items-center gap-2">
           <span>
             <Sparkles size={20} color="white" strokeWidth={1.25} />
           </span>
@@ -25,10 +25,10 @@ export default function HomeWays() {
             ميزات مدير
           </span>
         </div>
-        <div className="text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[50px] leading-tight">
+        <div className="text-[#FFFFFF] font-semibold text-xl sm:text-3xl md:text-4xl lg:text-[50px] leading-tight">
           غيّر الطريقة التي يعمل بها فريقك.{" "}
         </div>
-        <div className="text-[#686767] font-normal  text-2xl">
+        <div className="text-[#686767] font-normal text-2xl max-sm:text-lg">
           إدارة العمل كما يجب أن تكون— بسيطة، وذكية، ومتكاملة.{" "}
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function HomeWays() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             className="flex flex-col gap-4 border border-[#71717A] rounded-3xl py-6 pt-8  overflow-hidden px-8"
             style={{
@@ -107,11 +107,7 @@ export default function HomeWays() {
               </span>
             </div>
             <div className="flex justify-center">
-              <Image
-                src={way4}
-                alt="way-4"
-                className="w-full"
-              />
+              <Image src={way4} alt="way-4" className="w-full" />
             </div>
           </div>
 
@@ -126,11 +122,7 @@ export default function HomeWays() {
               </span>
             </div>
             <div className="flex justify-center pr-8">
-              <Image
-                src={way5}
-                alt="way-5"
-                className="w-full"
-              />
+              <Image src={way5} alt="way-5" className="w-full" />
             </div>
           </div>
 
@@ -151,16 +143,12 @@ export default function HomeWays() {
               </span>
             </div>
             <div className="flex justify-center pr-8">
-              <Image
-                src={way6}
-                alt="way-6"
-                className="w-full"
-              />
+              <Image src={way6} alt="way-6" className="w-full" />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center mt-24">
+      <div className="flex justify-center items-center mt-24 max-sm:mt-12">
         <div className="group w-[200px] relative flex justify-center items-center gap-2 text-[#141414F5] bg-[#FFFFFF] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300">
           <ArrowLeft
             color="#141414F5"

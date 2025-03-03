@@ -59,13 +59,7 @@ export default function HomeHeader() {
     partener8,
   ];
 
-  const words = [
-    "مشاريعك...",
-    "أهدافك...",
-    "عملك...",
-    "مهامك...",
-    "فريقك...",
-  ];
+  const words = ["مشاريعك...", "أهدافك...", "عملك...", "مهامك...", "فريقك..."];
   const typingSpeed = 50; // Speed of typing (ms per character)
   const deletingSpeed = 50; // Speed of deleting (ms per character)
   const delayBeforeDeleting = 10; // Delay before erasing (ms)
@@ -108,20 +102,20 @@ export default function HomeHeader() {
       dir={locale === "ar" ? "rtl" : "ltr"}
       className=" overflow-hidden mb-40 max-sm:mb-28"
     >
-      <div className="flex flex-col justify-center items-center gap-16 max-sm:gap-8 pt-[140px] sm:pt-[140px] md:pt-[180px] pb-[80px] sm:pb-[80px] md:pb-[100px] px-4 ">
-        <div className="grid gap-12">
-          <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[96px] text-[#0D0D0D] text-center">
+      <div className="flex flex-col justify-center items-center gap-16 max-sm:gap-8 pt-[120px] sm:pt-[120px] md:pt-[140px] pb-[80px] sm:pb-[80px] md:pb-[100px] px-4 ">
+        <div className="grid gap-12 max-md:gap-6">
+          <h1 className="font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[96px] text-[#0D0D0D] text-center">
             منصة واحدة لكل
           </h1>
 
           {/* Description */}
-          <p className="text-[40px] sm:text-lg md:text-[60px] lg:text-[90px] text-[#0D0D0D] font-light text-center">
+          <p className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[90px] text-[#0D0D0D] font-light text-center">
             {text}
             <span className="animate-blink">|</span> {/* Blinking Cursor */}
           </p>
         </div>
         <div className="grid gap-6">
-          <div className="text-2xl font-light text-[#0D0D0D]  text-center leading-10">
+          <div className="text-2xl font-light text-[#0D0D0D]  text-center ">
             أدر عملك وارفع إنتاجية <span className="font-bold">فريقك</span>{" "}
             وتعاون بشكل <span className="font-bold">أفضل</span> لتحقيق أهداف
             العمل المشتركة.{" "}
