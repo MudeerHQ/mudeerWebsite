@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React from "react";
@@ -19,8 +20,8 @@ import blog10 from "../../assets/blog10.png";
 import blog11 from "../../assets/blog11.png";
 import blog12 from "../../assets/blog12.png";
 import { Link } from "@/i18n/routing";
+import { formatDate, getApiUrl, getImageSrc } from "@/helpers";
 import { useQuery } from "@tanstack/react-query";
-import { getApiUrl } from "@/helpers";
 
 // Fetch function
 const fetchBlogs = async () => {
@@ -34,6 +35,8 @@ const fetchBlogs = async () => {
   return data;
 };
 
+
+
 export default function Blog() {
   const { data, error, isLoading } = useQuery({
     queryKey: ["blogs"],
@@ -46,7 +49,7 @@ export default function Blog() {
     return <p className="text-center text-red-500">Error loading blogs</p>;
 
   return (
-    <div className="px-[100px] grid justify-center" dir="rtl">
+    <div className="px-[100px] grid justify-center max-sm:px-[20px]" dir="rtl">
       <PageHeader title="المدونة" description="" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center">
         <div>
@@ -86,99 +89,46 @@ export default function Blog() {
       <hr />
 
       {isLoading ? (
-        <p className="text-center">Loading...</p>
+              <div className="flex justify-center items-center h-screen">
+              <p className="text-lg font-semibold">جارٍ تحميل البيانات...</p>
+            </div>
       ) : (
-        <div>
-          <div className="my-20">
-            <div className="">
-              <div className="flex sm:flex-row justify-between mb-4 px-4">
-                <span className="text-xl sm:text-[26px] font-semibold">
-                  أفضل الممارسات
-                </span>
-                <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-                  عرض الجميع <ArrowLeft />
-                </span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <BlogCard
-                  img={blog4}
-                  title="تقديم أكثر شمولاً تجارب مدير"
-                  description="29 ديسمبر، 2024"
-                />
-                <BlogCard
-                  img={blog5}
-                  title="تقديم أكثر شمولاً تجارب مدير"
-                  description="29 ديسمبر، 2024"
-                />
-                <BlogCard
-                  img={blog6}
-                  title="تقديم أكثر شمولاً تجارب مدير"
-                  description="29 ديسمبر، 2024"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="my-20">
-            <div className="flex sm:flex-row justify-between mb-4 px-4">
-              <span className="text-xl sm:text-[26px] font-semibold">
-                آخر التحديثات
-              </span>
-              <Link href="/blog/release-notes">
-                <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-                  عرض الجميع <ArrowLeft />
-                </span>
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <BlogCard
-                img={blog7}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-              <BlogCard
-                img={blog8}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-              <BlogCard
-                img={blog9}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-            </div>
-          </div>
-
-          <div className="my-20">
-            <div className="flex sm:flex-row justify-between mb-4 px-4">
-              <span className="text-xl sm:text-[26px] font-semibold">
-                خلف الكواليس
-              </span>
-              <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-                عرض الجميع <ArrowLeft />
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <BlogCard
-                img={blog10}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-              <BlogCard
-                img={blog11}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-              <BlogCard
-                img={blog12}
-                title="تقديم أكثر شمولاً تجارب مدير"
-                description="29 ديسمبر، 2024"
-              />
-            </div>
-          </div>
-        </div>
+        <>
+          {data &&
+            data.map((blog: any, index: any) => {
+              return (
+                <div key={index}>
+                  <div className="my-20">
+                    <div className="">
+                      <div className="flex sm:flex-row justify-between mb-4 px-4">
+                        <span className="text-xl sm:text-[26px] font-semibold">
+                          {blog.title}
+                        </span>
+                        
+                        <Link href={`blog/${blog.id}`}>
+                        <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
+                          عرض الجميع <ArrowLeft />
+                        </span>
+                        </Link>
+                      </div>
+                      {blog.posts?.length > 0 && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {blog.posts.map((post: any, index: any) => (
+                            <BlogCard
+                              key={index}
+                              img={getImageSrc(post.cover)}
+                              title={post.title}
+                              description={formatDate(post.updatedAt)}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </>
       )}
     </div>
   );

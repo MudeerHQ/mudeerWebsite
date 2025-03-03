@@ -67,7 +67,7 @@ export default function AboutHeader() {
         backgroundPosition: `center calc(1rem)`,
       }}
     >
-      <div className="flex flex-col justify-center items-center gap-8 pt-[100px] sm:pt-[140px] md:pt-[180px] pb-[60px] sm:pb-[80px] md:pb-[100px] px-4 ">
+      <div className="flex flex-col justify-center items-center gap-8 pt-[100px] sm:pt-[120px] md:pt-[140px] pb-[60px] sm:pb-[80px] md:pb-[100px] px-4 ">
         <div className="grid gap-6">
           <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl text-[#FFD800] text-center">
             منصة إدارة العمل التعاوني
@@ -75,7 +75,7 @@ export default function AboutHeader() {
 
           {/* Description */}
           <p className="text-base sm:text-lg md:text-5xl text-[#FFFFFF] text-center">
-            .حيث تعمل الفرق معًا لتحقق المزيد{" "}
+          حيث تعمل الفرق معًا لتحقق المزيد.
           </p>
         </div>
         <div className="text-2xl font-normal text-[#FFFFFF] max-w-[90%] sm:max-w-[80%] md:max-w-[55%] text-center leading-10">
