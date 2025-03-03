@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export interface PageHeaderProps {
   title: string;
@@ -16,7 +16,7 @@ export interface PackageCardProps {
 }
 
 export interface BlogCardProps {
-  img: StaticImageData;
+  img: any;
   title: string;
   description: string;
 }

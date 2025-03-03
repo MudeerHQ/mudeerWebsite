@@ -13,3 +13,9 @@ export function formatDate(timestamp: any) {
   
     return `${year}-${month}-${day}`;
   }
+
+  export const getImageSrc = (cover: string) => {
+    return cover.startsWith("data:image")
+      ? cover
+      : `data:image/jpeg;base64,${cover}`;
+  };

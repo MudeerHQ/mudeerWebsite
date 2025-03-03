@@ -60,8 +60,8 @@ export default function HomeHeader() {
   ];
 
   const words = ["مشاريعك...", "أهدافك...", "عملك...", "مهامك...", "فريقك..."];
-  const typingSpeed = 50; // Speed of typing (ms per character)
-  const deletingSpeed = 50; // Speed of deleting (ms per character)
+  const typingSpeed = 20; // Speed of typing (ms per character)
+  const deletingSpeed = 20; // Speed of deleting (ms per character)
   const delayBeforeDeleting = 10; // Delay before erasing (ms)
 
   const [index, setIndex] = useState(0); // Track current word
