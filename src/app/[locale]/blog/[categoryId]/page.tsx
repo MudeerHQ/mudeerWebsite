@@ -7,20 +7,20 @@ import { useParams } from "next/navigation";
 import { formatDate, getApiUrl, getImageSrc } from "@/helpers";
 import { useQuery } from "@tanstack/react-query";
 
-const fetchBlogsById = async (id: string) => {
-  const res = await fetch(getApiUrl(`/category/${id}`));
-  if (!res.ok) throw new Error("Failed to fetch blogs");
+const fetchCategoryById = async (categoryId: string) => {
+  const res = await fetch(getApiUrl(`/category/${categoryId}`));
+  if (!res.ok) throw new Error("Failed to fetch Category");
   return res.json();
 };
 
-export default function ReleaseNote() {
+export default function CategoryId() {
   const params = useParams();
-  const id = Array.isArray(params.id) ? params.id[0] : params.id; 
+  const categoryId = Array.isArray(params.categoryId) ? params.categoryId[0] : params.categoryId; 
 
   const { data, error, isLoading } = useQuery({
-    queryKey: ["blogsId", id],
-    queryFn: () => fetchBlogsById(id!),
-    enabled: !!id,
+    queryKey: ["categoryId", categoryId],
+    queryFn: () => fetchCategoryById(categoryId!),
+    enabled: !!categoryId,
     staleTime: 6 * 60 * 60 * 1000,
     refetchOnMount: false,
     refetchOnWindowFocus: false,

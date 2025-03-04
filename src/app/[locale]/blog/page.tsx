@@ -35,8 +35,6 @@ const fetchBlogs = async () => {
   return data;
 };
 
-
-
 export default function Blog() {
   const { data, error, isLoading } = useQuery({
     queryKey: ["blogs"],
@@ -89,9 +87,9 @@ export default function Blog() {
       <hr />
 
       {isLoading ? (
-              <div className="flex justify-center items-center h-screen">
-              <p className="text-lg font-semibold">جارٍ تحميل البيانات...</p>
-            </div>
+        <div className="flex justify-center items-center h-screen">
+          <p className="text-lg font-semibold">جارٍ تحميل البيانات...</p>
+        </div>
       ) : (
         <>
           {data &&
@@ -104,22 +102,26 @@ export default function Blog() {
                         <span className="text-xl sm:text-[26px] font-semibold">
                           {blog.title}
                         </span>
-                        
+
                         <Link href={`blog/${blog.id}`}>
-                        <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-                          عرض الجميع <ArrowLeft />
-                        </span>
+                          <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
+                            عرض الجميع <ArrowLeft />
+                          </span>
                         </Link>
                       </div>
                       {blog.posts?.length > 0 && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                           {blog.posts.map((post: any, index: any) => (
-                            <BlogCard
-                              key={index}
-                              img={getImageSrc(post.cover)}
-                              title={post.title}
-                              description={formatDate(post.updatedAt)}
-                            />
+                            <div key={index}>
+                              <Link href={`blog/${blog.id}/${post.id}`}>
+                                <BlogCard
+                                  key={index}
+                                  img={getImageSrc(post.cover)}
+                                  title={post.title}
+                                  description={formatDate(post.updatedAt)}
+                                />
+                              </Link>
+                            </div>
                           ))}
                         </div>
                       )}
