@@ -61,13 +61,13 @@ export default function AboutHeader() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="bg-bottom bg-contain bg-no-repeat overflow-hidden mb-80 max-sm:mb-28"
+      className="bg-bottom bg-contain bg-no-repeat overflow-hidden mb-56 max-sm:mb-28"
       style={{
         backgroundImage: `url(${backAbout.src})`,
         backgroundPosition: `center calc(1rem)`,
       }}
     >
-      <div className="flex flex-col justify-center items-center gap-8 pt-[100px] sm:pt-[120px] md:pt-[140px] pb-[60px] sm:pb-[80px] md:pb-[100px] px-4 ">
+      <div className="flex flex-col justify-center items-center gap-12 pt-[100px] sm:pt-[120px] md:pt-[140px] pb-0 sm:pb-[80px] md:pb-[100px] px-4 ">
         <div className="grid gap-6">
           <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl text-[#FFD800] text-center">
             منصة إدارة العمل التعاوني
@@ -78,7 +78,7 @@ export default function AboutHeader() {
           حيث تعمل الفرق معًا لتحقق المزيد.
           </p>
         </div>
-        <div className="text-2xl font-normal text-[#FFFFFF] max-w-[90%] sm:max-w-[80%] md:max-w-[55%] text-center leading-10">
+        <div className="text-2xl font-normal text-[#FFFFFF] max-w-[80%] sm:max-w-[80%] md:max-w-[70%] text-center leading-10">
           مدير منصة متكاملة مصمّمة لرفع إنتاجية الفرق وتعزيز التعاون وزيادة
           شفافية التواصل لتحقيق أهداف العمل المشتركة، لأن الأفكار والأشخاص
           .العظيمين يستحقون التنفيذ الرائع
