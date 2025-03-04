@@ -47,7 +47,7 @@ export default function Blog() {
     return <p className="text-center text-red-500">Error loading blogs</p>;
 
   return (
-    <div className="px-[100px] grid justify-center max-sm:px-[20px]" dir="rtl">
+    <div className="px-[100px] grid justify-center max-sm:px-[20px] bg-[#F5F5F4]" dir="rtl" >
       <PageHeader title="المدونة" description="" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center items-center">
         <div>
@@ -103,7 +103,7 @@ export default function Blog() {
                           {blog.title}
                         </span>
 
-                        <Link href={`blog/${blog.id}`}>
+                        <Link href={`blog/${blog.slug_url}`}>
                           <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
                             عرض الجميع <ArrowLeft />
                           </span>
@@ -113,7 +113,7 @@ export default function Blog() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                           {blog.posts.map((post: any, index: any) => (
                             <div key={index}>
-                              <Link href={`blog/${blog.id}/${post.id}`}>
+                              <Link href={`blog/${blog.slug_url}/${post.slug_url}`}>
                                 <BlogCard
                                   key={index}
                                   img={getImageSrc(post.cover)}

@@ -65,7 +65,7 @@ export default function FeaturesEffect() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto  -mt-32 bg-[#1A1919] pt-10 rounded-t-[100px] overflow-hidden pb-32 max-sm:rounded-t-[50px]"
+      className="h-auto  -mt-32 bg-[#1A1919] pt-10 rounded-t-[60px] overflow-hidden pb-32 max-sm:rounded-t-[30px]"
     >
       <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-24 max-sm:pt-6 pb-10 pl-3">
         <div className="text-[#FFFFFF] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
@@ -75,7 +75,7 @@ export default function FeaturesEffect() {
           كل ما تحتاجه لتنظيم وإدارة العمل بسهولة ووضوح.{" "}
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 px-6 md:px-6 lg:px-10">
+      <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6 justify-center w-[70%] max-sm:w-[90%] m-auto">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden">
             <div className="pl-6 md:pl-8 text-center md:text-start">
@@ -92,7 +92,7 @@ export default function FeaturesEffect() {
               <Image
                 src={effect1}
                 alt="effect-1"
-                className="w-full md:w-auto"
+                className="w-full"
               />
             </div>
           </div>
@@ -117,13 +117,13 @@ export default function FeaturesEffect() {
               <Image
                 src={effect2}
                 alt="effect-2"
-                className="w-full md:w-auto"
+                className="w-full"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden">
+        <div className="flex flex-col justify-between gap-4 bg-[#3737371A] border border-[#71717A] rounded-3xl pt-6 pr-6 md:pr-8 max-w-full md:max-w-[400px] lg:max-w-[525px] overflow-hidden">
           <div className="pl-6 md:pl-8 text-center md:text-start">
             <span className="font-semibold text-[17px] text-[#FFFFFF]">
               التقويم التفاعلي. لا تفوت أي موعد تسليم.
@@ -134,12 +134,12 @@ export default function FeaturesEffect() {
             </span>
           </div>
           <div className="flex justify-center md:justify-end">
-            <Image src={effect3} alt="effect-3" className="w-full md:w-auto" />
+            <Image src={effect3} alt="effect-3" className="w-full h-full" />
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center py-32 max-sm:py-12 pl-3">
+      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center py-40 max-sm:py-12 pl-3">
         <div className="text-[#FFFFFF] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
           تأثير مدير{" "}
         </div>
@@ -147,7 +147,7 @@ export default function FeaturesEffect() {
           تبسيط العمل، وتعزيز الإنتاجية، وإنجاز المشاريع كما لم تفعل من قبل.{" "}
         </div>
       </div>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-16">
         <div
           className="flex flex-col justify-center items-center gap-4 rounded-[40px] bg-cover bg-no-repeat overflow-hidden py-6 md:py-12 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] m-auto"
           style={{

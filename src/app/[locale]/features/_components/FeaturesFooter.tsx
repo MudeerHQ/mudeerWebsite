@@ -14,40 +14,43 @@ export default function FeaturesFooter() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto min-h-[500px] -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[100px] overflow-hidden max-sm:pb-20"
+      className="-mb-16 h-auto min-h-[500px] -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[60px] max-sm:rounded-t-[30px] overflow-hidden max-sm:pb-20"
     >
-        <SectionsSlider />
-        <Questions />
-        <div className="my-20 px-[100px] max-sm:px-10">
-          <div className="flex sm:flex-row justify-between mb-4 px-4">
-            <span className="text-xl sm:text-[26px] font-semibold">
-              آخر التحديثات
-            </span>
-            <Link href="/blog/release-notes">
-              <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
-                عرض الجميع <ArrowLeft />
-              </span> 
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <BlogCard
-              img={blog7}
-              title="تقديم أكثر شمولاً تجارب مدير"
-              description="29 ديسمبر، 2024"
-            />
-            <BlogCard
-              img={blog8}
-              title="تقديم أكثر شمولاً تجارب مدير"
-              description="29 ديسمبر، 2024"
-            />
-            <BlogCard
-              img={blog9}
-              title="تقديم أكثر شمولاً تجارب مدير"
-              description="29 ديسمبر، 2024"
-            />
-          </div>
+      <SectionsSlider />
+      <Questions />
+      <div className="mb-40 px-[100px] max-sm:px-10">
+        <div className="flex justify-center items-center mb-16 font-semibold text-[#0D0D0D] text-[64px] max-md:text-[32px]">
+          تعرف على جديد مدير
         </div>
+        <div className="flex sm:flex-row justify-between mb-4 px-4">
+          <span className="text-xl sm:text-[26px] font-semibold">
+            آخر التحديثات
+          </span>
+          <Link href="/blog/release-notes">
+            <span className="text-sm font-semibold text-[#0037FF] flex items-center gap-1 cursor-pointer">
+              عرض الجميع <ArrowLeft />
+            </span>
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <BlogCard
+            img={blog7}
+            title="تقديم أكثر شمولاً تجارب مدير"
+            description="29 ديسمبر، 2024"
+          />
+          <BlogCard
+            img={blog8}
+            title="تقديم أكثر شمولاً تجارب مدير"
+            description="29 ديسمبر، 2024"
+          />
+          <BlogCard
+            img={blog9}
+            title="تقديم أكثر شمولاً تجارب مدير"
+            description="29 ديسمبر، 2024"
+          />
+        </div>
+      </div>
     </div>
   );
 }

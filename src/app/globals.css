@@ -166,3 +166,24 @@
   display: inline-block;
   animation: blink 1s step-end infinite;
 }
+
+.swiper-slide-custom {
+  margin: 0 20px;
+}
+
+@media (max-width: 1380px) {
+  .swiper-slide-custom {
+    margin: 0 100px;
+  }
+}
+@media (max-width: 768px) {
+  .swiper-slide-custom {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 486px) {
+  .swiper-slide-custom {
+    margin: 0 ;
+  }
+}

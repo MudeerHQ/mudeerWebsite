@@ -23,7 +23,7 @@ const SectionsSlider = () => {
 
   return (
     <div className=" pr-8 max-sm:pr-0 flex flex-col gap-8 mb-[100px] max-lg:mb-[30px] max-lg:-mt-[60px]">
-      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-32 pb-10 pl-3">
+      <div className="flex flex-col gap-6 justify-center items-center px-4 text-center pt-32  pl-3">
         <div className="text-[#0D0D0D] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
           غيّر الطريقة التي يعمل بها فريقك.
         </div>
@@ -47,8 +47,8 @@ const SectionsSlider = () => {
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           speed={1000}
           breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 20 },
+            640: { slidesPerView: 3, spaceBetween: 20 },
+            768: { slidesPerView: 4, spaceBetween: 20 },
             1024: { slidesPerView: 4, spaceBetween: 20 },
           }}
           className="mySwiper"
@@ -99,7 +99,8 @@ const SectionsSlider = () => {
           ].map((goal, index) => (
             <SwiperSlide
               key={index}
-              style={{ width: "400px", height: "500px", margin: "0 100px" }}
+              className="swiper-slide-custom"
+              style={{ width: "400px", height: "500px" }}
             >
               {" "}
               {/* Set width for each slide */}

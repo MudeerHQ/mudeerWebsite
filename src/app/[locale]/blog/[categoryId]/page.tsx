@@ -45,12 +45,12 @@ export default function CategoryId() {
   }
 
   return (
-    <div className="px-[100px] grid justify-center mb-20" dir="rtl">
+    <div className="px-[100px] -mb-12 grid justify-center pb-32 bg-[#F5F5F4]" dir="rtl">
       <PageHeader title={data?.title} description={data?.description} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data?.posts?.map((blog: any, index: any) => (
           <div key={index}>
-            <Link href={`/blog/${data.id}/${blog.id}`}>
+            <Link href={`/blog/${data.slug_url}/${blog.slug_url}`}>
               <BlogCard
                 key={blog.id}
                 img={getImageSrc(blog.cover)}

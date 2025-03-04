@@ -51,7 +51,7 @@ export default function BlogId() {
 
   return (
     <div
-      className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 grid justify-center mb-20"
+      className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 grid justify-center -mb-12 pb-32 bg-[#F5F5F4]"
       dir="rtl"
     >
       <div>
@@ -104,7 +104,7 @@ export default function BlogId() {
       </div>
 
       <EditorProvider
-      
+      editable={false} 
         extensions={[StarterKit]} // Ensure schema is provided
         content={data?.canvas?.content || "<p>لا يوجد محتوى</p>"} // Avoid empty content
       >

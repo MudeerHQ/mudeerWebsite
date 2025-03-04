@@ -15,7 +15,7 @@ export default function Pricing() {
 
   return (
     <div
-      className="bg-no-repeat bg-top"
+      className="bg-no-repeat bg-top bg-[#F5F5F4]"
       style={{ backgroundImage: `url(${backHeader.src})` }}
       dir={locale === "ar" ? "rtl" : "ltr"} // Set direction dynamically
     >

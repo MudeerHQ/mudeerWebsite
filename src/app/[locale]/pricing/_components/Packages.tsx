@@ -61,7 +61,7 @@ export default function Packages() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-14 px-6 sm:px-10 md:px-20 lg:px-60 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 w-[70%] max-sm:w-[90%] m-auto mb-10">
         {packages.map((pkg, index) => (
           <PackageCard key={index} {...pkg} isSecond={index === 1} />
         ))}
@@ -77,14 +77,14 @@ export default function Packages() {
         </span>
       </div>
 
-      <div className="px-4 sm:px-8 md:px-20 lg:px-40 xl:px-60 mb-20">
+      <div className="w-[70%] m-auto mb-20 max-sm:w-[90%]">
         <div className="flex flex-col md:flex-row justify-between items-center px-6 py-6 md:px-[30px] md:py-[35px] bg-[#FFFFFF66] rounded-[20px] md:rounded-[30px] shadow-md">
           {/* Text Section */}
-          <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto text-center md:text-right">
+          <div className="flex flex-col md:flex-row items-center gap-8 w-full md:w-auto text-center md:text-right">
             <div className="border-l-[2px] md:border-l-2 border-[rgba(13, 13, 13, .15)] pl-4 font-semibold text-lg md:text-xl max-md:border-none">
               الأعمال الكبيرة
             </div>
-            <div className="font-normal text-sm sm:text-base text-[#504f4f] md:w-[60%]">
+            <div className="font-normal text-sm sm:text-base text-[#504f4f] md:w-[65%]">
               ارفع نسب الإنتاجية والإنجاز وحقّق أهداف عملك، وفّر وقتك وجهدك مع
               إمكانات تحكُّم وأتمتة غير محدودة.
             </div>
