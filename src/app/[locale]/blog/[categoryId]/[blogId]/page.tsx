@@ -105,7 +105,7 @@ export default function BlogId() {
 
       <EditorProvider
         extensions={[StarterKit]} // Ensure schema is provided
-        content={data?.canvas.content || "<p>لا يوجد محتوى</p>"} // Avoid empty content
+        content={data?.canvas?.content || "<p>لا يوجد محتوى</p>"} // Avoid empty content
       >
         <EditorContent editor={null} />
       </EditorProvider>

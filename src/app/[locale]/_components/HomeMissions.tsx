@@ -87,8 +87,8 @@ function Card({
                     y2="0.273374"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#FF802B" />
-                    <stop offset="1" stop-color="#335FFF" />
+                    <stop stopColor="#FF802B" />
+                    <stop offset="1" stopColor="#335FFF" />
                   </linearGradient>
                   <linearGradient
                     id="paint1_linear_6688_369"
@@ -98,8 +98,8 @@ function Card({
                     y2="6.35354"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#2CC171" />
-                    <stop offset="1" stop-color="#0037FF" />
+                    <stop stopColor="#2CC171" />
+                    <stop offset="1" stopColor="#0037FF" />
                   </linearGradient>
                 </defs>
               </svg>
