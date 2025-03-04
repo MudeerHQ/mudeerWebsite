@@ -6,6 +6,7 @@ import BlogCard from "@/components/BlogCard";
 import { useParams } from "next/navigation";
 import { formatDate, getApiUrl, getImageSrc } from "@/helpers";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "@/i18n/routing";
 
 const fetchCategoryById = async (categoryId: string) => {
   const res = await fetch(getApiUrl(`/category/${categoryId}`));
@@ -15,7 +16,9 @@ const fetchCategoryById = async (categoryId: string) => {
 
 export default function CategoryId() {
   const params = useParams();
-  const categoryId = Array.isArray(params.categoryId) ? params.categoryId[0] : params.categoryId; 
+  const categoryId = Array.isArray(params.categoryId)
+    ? params.categoryId[0]
+    : params.categoryId;
 
   const { data, error, isLoading } = useQuery({
     queryKey: ["categoryId", categoryId],
@@ -45,13 +48,17 @@ export default function CategoryId() {
     <div className="px-[100px] grid justify-center mb-20" dir="rtl">
       <PageHeader title={data?.title} description={data?.description} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data?.posts?.map((blog: any) => (
-          <BlogCard
-            key={blog.id}
-            img={getImageSrc(blog.cover)}
-            title={blog.title}
-            description={formatDate(blog.updatedAt)}
-          />
+        {data?.posts?.map((blog: any, index: any) => (
+          <div key={index}>
+            <Link href={`/blog/${data.id}/${blog.id}`}>
+              <BlogCard
+                key={blog.id}
+                img={getImageSrc(blog.cover)}
+                title={blog.title}
+                description={formatDate(blog.updatedAt)}
+              />
+            </Link>
+          </div>
         ))}
       </div>
     </div>
