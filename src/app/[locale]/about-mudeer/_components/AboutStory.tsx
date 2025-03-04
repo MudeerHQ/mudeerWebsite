@@ -1,11 +1,5 @@
 import React from "react";
 import { useLocale } from "next-intl";
-import Image from "next/image";
-import shape1 from "../../../assets/shape1.png";
-import shape2 from "../../../assets/shape2.png";
-import shape3 from "../../../assets/shape3.png";
-import shape4 from "../../../assets/shape4.png";
-import shape5 from "../../../assets/shape5.png";
 
 export default function AboutStory() {
   const locale = useLocale();
