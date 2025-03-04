@@ -932,44 +932,13 @@ export function NavigationMenuDemo() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="flex items-center gap-1 text-base font-semibold cursor-pointer">
-                {t("title2")}
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul
-                  className="flex flex-col gap-5 w-[350px] p-[30px]"
-                  dir={locale === "ar" ? "rtl" : "ltr"}
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`px-2 py-2 text-base font-semibold cursor-pointer`}
                 >
-                  <li className="font-normal text-base text-[#010101]">
-                    حسب الفريق
-                  </li>
-                  <Link href="/solutions/project-management">
-                    <li className="font-semibold text-base text-[#010101]">
-                      {t("li11")}
-                    </li>
-                  </Link>
-                  <Link href="/solutions/marketing ">
-                    <li className="font-semibold text-base text-[#010101]">
-                      {t("li13")}
-                    </li>
-                  </Link>
-                  <Link href="/solutions/operations">
-                    <li className="font-semibold text-base text-[#010101]">
-                      {t("li12")}
-                    </li>
-                  </Link>
-                  <Link href="/solutions/hr">
-                    <li className="font-semibold text-base text-[#010101]">
-                      {t("li15")}
-                    </li>
-                  </Link>
-                  <Link href="/solutions/leaders ">
-                    <li className="font-semibold text-base text-[#010101]">
-                      {t("li14")}
-                    </li>
-                  </Link>
-                </ul>
-              </NavigationMenuContent>
+                  {t("title2")}
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="flex items-center gap-1 text-base font-semibold cursor-pointer">

@@ -10,7 +10,7 @@ export default function AboutVision() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="flex flex-col gap-16 lg:gap-24 bg-center bg-contain bg-no-repeat bg-[#09090B] h-auto min-h-[900px] lg:min-h-[1250px] -mt-24 rounded-t-[50px] lg:rounded-t-[100px] overflow-hidden py-16 lg:py-[200px] px-8"
+      className="flex flex-col gap-16 lg:gap-24 bg-center bg-contain bg-no-repeat bg-[#09090B] h-auto min-h-[800px] md:min-h-[900px] lg:min-h-[1200px] -mt-24 rounded-t-[30px] lg:rounded-t-[60px] overflow-hidden py-16 lg:pt-[100px] px-8"
       style={{
         backgroundImage: `url(${backVision.src})`,
         backgroundPosition: `center top`,
@@ -28,7 +28,7 @@ export default function AboutVision() {
           <div className="font-bold text-xl md:text-3xl lg:text-4xl text-[#09090B] bg-[#FFD800] w-fit px-4 py-2 rounded-[12px] rotate-[10deg] md:rotate-[15deg]">
             &quot;مهمتنا
           </div>
-          <div className="font-semibold text-xl md:text-4xl lg:text-5xl text-[#FFFFFF] leading-[40px] md:leading-[60px] lg:leading-[70px] w-full md:w-[80%] lg:w-[70%]">
+          <div className="font-semibold text-xl md:text-4xl lg:text-5xl text-[#FFFFFF] leading-[40px] md:leading-[60px] lg:leading-[70px] w-full md:w-[80%] lg:w-[65%]">
             تمكين الأفراد وفرق العمل من تحقيق إنتاجية أعلى للوصول إلى أقصى
             إمكاناتهم.
           </div>
@@ -38,7 +38,7 @@ export default function AboutVision() {
       {/* Vision Section */}
       <div className="flex justify-end">
         <div
-          className="flex flex-col gap-3  py-10 bg-contain bg-no-repeat"
+          className="flex flex-col gap-3  py-10 bg-contain bg-no-repeat "
           style={{
             backgroundImage: `url(${backVisionSec.src})`,
             backgroundPosition: "right center",
@@ -48,7 +48,7 @@ export default function AboutVision() {
             <div className="font-bold text-2xl md:text-3xl lg:text-4xl text-[#09090B] bg-[#99AFFF] w-fit px-4 py-2 rounded-[12px] rotate-[-10deg] md:rotate-[-15deg]">
               &quot;رؤيتنا
             </div>
-            <div className="font-semibold text-2xl md:text-4xl lg:text-5xl text-[#FFFFFF] leading-[40px] md:leading-[60px] lg:leading-[70px] w-full md:w-[90%]">
+            <div className="font-semibold text-2xl md:text-4xl lg:text-5xl text-[#FFFFFF] leading-[40px] md:leading-[60px] lg:leading-[70px] w-full md:w-[80%]">
               بناء منتجات مصمّمة للأفراد، مبنية لتعزيز الإنتاجية.
             </div>
           </div>

@@ -83,7 +83,7 @@ export default async function LocaleLayout({
       <NextIntlClientProvider messages={messages}>
         <body
           className={` 
-             ${GraphikArabicThin.variable}
+          ${GraphikArabicThin.variable}
           ${GraphikArabicExtralight.variable}
           ${GraphikArabicLight.variable}
           ${GraphikArabicRegular.variable}
@@ -92,7 +92,7 @@ export default async function LocaleLayout({
           ${GraphikArabicBold.variable}
           ${GraphikArabicBlack.variable}
           ${GraphikArabicSuper.variable}
-          bg-[#F5F5F4]`}
+          bg-white`}
         >
           {/* <Navbar /> */}
           <QueryProvider>
