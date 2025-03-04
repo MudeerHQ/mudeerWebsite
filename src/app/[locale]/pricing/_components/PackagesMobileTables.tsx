@@ -23,7 +23,7 @@ export default function PackagesMobileTables() {
   };
 
   return (
-    <div className="py-20 mb-10">
+    <div className="mb-10 ">
       <div className="flex justify-center items-center">
         <h3 className="text-[64px] font-semibold max-sm:text-3xl">
           مقارنة الباقات
@@ -34,24 +34,24 @@ export default function PackagesMobileTables() {
       <div className="mt-10">
         <div className="px-4 grid grid-cols-[40%_15%_15%_15%_15%] gap-[2px] border-b border-gray-300">
           <div className="max-sm:w-[75px]"></div>
-          {Array(4)
-            .fill(null)
-            .map((_, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-1 items-center mb-6"
-              >
-                <span className="font-semibold text-lg text-[#0D0D0D] max-sm:text-sm">
-                  الأساسية
-                </span>
-                <span className="text-[#0D0D0D] font-normal text-sm">
-                  9 دولار
-                </span>
-                <button className="bg-black text-white rounded-[8px] text-xs font-semibold px-3 py-2 max-sm:px-1 max-sm:text-[10px]">
-                  جرّب مجانًا
-                </button>
-              </div>
-            ))}
+          {[
+            { title: "الأساسية", price: "0 دولار", button:"جرّب مجانًا" },
+            { title: "الفريق", price: "9 دولار", button:"جرّب مجانًا" },
+            { title: "الاحترافية", price: "19 دولار", button:"جرّب مجانًا" },
+            { title: "الأعمال", price: "مخصّص", button:"تواصل معنا" },
+          ].map((pkg, index) => (
+            <div key={index} className="flex flex-col gap-1 items-center mb-6">
+              <span className="font-semibold text-lg text-[#0D0D0D] max-sm:text-sm">
+                {pkg.title}
+              </span>
+              <span className="text-[#0D0D0D] font-normal text-sm">
+              {pkg.price}
+              </span>
+              <button className="bg-black text-white rounded-[8px] text-xs font-semibold px-3 py-2 max-sm:px-1 max-sm:text-[10px]">
+              {pkg.button}
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 

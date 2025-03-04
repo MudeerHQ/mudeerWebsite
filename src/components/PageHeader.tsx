@@ -6,7 +6,7 @@ export default function PageHeader({ title, description }: PageHeaderProps) {
   return (
     <div
       dir="rtl"
-      className="flex flex-col justify-center items-center gap-6 pt-[180px] pb-[100px] px-4 sm:px-8 md:px-16"
+      className="flex flex-col justify-center items-center gap-6 pt-[180px] pb-[100px] max-md:pb-[20px] px-4 sm:px-8 md:px-16"
     >
       <h1 className="font-bold text-[40px] sm:text-[60px] md:text-[80px] text-[#010101] text-center">
         {title}

@@ -13,9 +13,9 @@ export default function FeaturesIdeas() {
   return (
     <div
       dir={locale === "ar" ? "rtl" : "ltr"}
-      className="h-auto  -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[100px] overflow-hidden pb-56 max-sm:rounded-t-[50px]"
+      className="h-auto  -mt-32 bg-[#F5F5F4] pt-10 rounded-t-[60px] overflow-hidden pb-56 max-sm:rounded-t-[30px]"
     >
-      <div className="flex flex-col gap-10 justify-center items-center px-4 text-center pt-24 max-sm:pt-6 pb-10 pl-3">
+      <div className="flex flex-col gap-10 justify-center items-center px-4 text-center pt-24 max-sm:pt-6 pb-28 pl-3">
         <div className="text-[#0D0D0D] font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight">
           لأنّ الأفكار العظيمة لا تُخلق في عزلة.{" "}
         </div>
@@ -25,8 +25,8 @@ export default function FeaturesIdeas() {
       </div>
       <div className="flex flex-col gap-[200px] max-md:gap-[50px]">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16 px-6 md:px-[50px] lg:px-[100px]">
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col justify-start gap-4 text-center md:text-start">
+          <div className="flex flex-col gap-12 h-full justify-around">
+            <div className="flex flex-col justify-start gap-6 text-center md:text-start">
               <span className="px-4 py-1 bg-[#00B252] rounded-[40px] font-semibold text-lg text-[#FFFFFF] w-fit mx-auto md:mx-0">
                 تحكّم 🧠
               </span>
@@ -47,17 +47,17 @@ export default function FeaturesIdeas() {
               <ArrowLeft />
             </div>
           </div>
-          <div className="flex justify-center rounded-[19px] overflow-hidden">
-            <Image src={idea1} alt="idea-1" className="w-full md:w-auto" />
+          <div className=" justify-center rounded-[19px] overflow-hidden">
+            <Image src={idea1} alt="idea-1"  />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16 px-6 md:px-[50px] lg:px-[100px] max-md:flex max-md:flex-col-reverse ">
           <div className="flex justify-center rounded-[19px] overflow-hidden">
-            <Image src={idea2} alt="idea-2" className="w-full md:w-auto" />
+            <Image src={idea2} alt="idea-2" />
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col justify-start gap-4 text-center md:text-start">
+          <div className="flex flex-col gap-12 h-full justify-around">
+            <div className="flex flex-col justify-start gap-6 text-center md:text-start">
               <span className="px-4 py-1 bg-[#00B252] rounded-[40px] font-semibold text-lg text-[#FFFFFF] w-fit mx-auto md:mx-0">
                 تعاون 💬️
               </span>
@@ -78,8 +78,8 @@ export default function FeaturesIdeas() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16 px-6 md:px-[50px] lg:px-[100px]">
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col justify-start gap-4 text-center md:text-start">
+          <div className="flex flex-col gap-12 h-full justify-around">
+            <div className="flex flex-col justify-start gap-6 text-center md:text-start">
               <span className="px-4 py-1 bg-[#00B252] rounded-[40px] font-semibold text-lg text-[#FFFFFF] w-fit mx-auto md:mx-0">
                 تتبع ⚡️
               </span>
@@ -101,16 +101,16 @@ export default function FeaturesIdeas() {
             </div>
           </div>
           <div className="flex justify-center rounded-[19px] overflow-hidden">
-            <Image src={idea3} alt="idea-3" className="w-full md:w-auto" />
+            <Image src={idea3} alt="idea-3" />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16 px-6 md:px-[50px] lg:px-[100px] max-md:flex max-md:flex-col-reverse">
           <div className="flex justify-center rounded-[19px] overflow-hidden">
-            <Image src={idea4} alt="idea-4" className="w-full md:w-auto" />
+            <Image src={idea4} alt="idea-4" />
           </div>
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col justify-start gap-4 text-center md:text-start">
+          <div className="flex flex-col gap-12 h-full justify-around">
+            <div className="flex flex-col justify-start gap-6 text-center md:text-start">
               <span className="px-4 py-1 bg-[#00B252] rounded-[40px] font-semibold text-lg text-[#FFFFFF] w-fit mx-auto md:mx-0">
                 وضوح 🎯
               </span>

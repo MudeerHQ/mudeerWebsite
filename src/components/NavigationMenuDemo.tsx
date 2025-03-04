@@ -1109,7 +1109,7 @@ export function NavigationMenuDemo() {
         </NavigationMenu>
       </div>
       <div className="flex items-center justify-center">
-        <div className="max-[900px]:hidden">
+        <div className="flex max-[900px]:hidden">
           <LocaleSwitcherWrapper
             currentLocale={currentLocale}
             label="Switch Language"

@@ -90,9 +90,18 @@ export default function FeaturesHeader() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
-          <div className="group w-[170px] relative flex justify-center items-center gap-2 text-black bg-[#FFFFFF] rounded-[18px] py-[14px] px-3 text-lg font-normal cursor-pointer hover:rounded-3xl transition-all duration-300">
+          <div className="group w-[150px] relative flex justify-center items-center gap-2 text-black bg-white rounded-[18px] p-[14px] text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300">
+            <ArrowLeft
+              // color="#FFFFFF"
+              size={14}
+              className="text-white -right-[2px] group-hover:text-black ml-2 absolute group-hover:right-2 transition-all duration-200"
+            />
             جرّب مدير مجانًا
-            <ArrowLeft color="black" size={14} />
+            <ArrowLeft
+              color="black"
+              size={14}
+              className="group-hover:hidden transition-opacity duration-200"
+            />
           </div>
           <div className="rounded-[18px] py-[14px] px-3 border-2 border-[#FFFFFF] font-normal text-lg cursor-pointer bg-transparent text-[#FFFFFF] w-[170px] text-center hover:rounded-3xl transition-all duration-300">
             تواصل مع المبيعات
@@ -103,8 +112,8 @@ export default function FeaturesHeader() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px] w-[90%] m-auto">
-        <div className="bg-[#0D0D0D80] max-w-[380px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between w-[80%] m-auto">
+        <div className="bg-[#0D0D0D80] min-h-[285px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
           <div>
             <Image src={feature1} alt="feature-1" />
           </div>
@@ -116,7 +125,7 @@ export default function FeaturesHeader() {
             تفاعلية تجعل التعاون أسهل وأسرع.
           </p>
         </div>
-        <div className="bg-[#0D0D0D80] max-w-[380px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
+        <div className="bg-[#0D0D0D80] min-h-[285px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
           <div>
             <Image src={feature2} alt="feature-2" />
           </div>
@@ -126,7 +135,7 @@ export default function FeaturesHeader() {
             لتتبع الأداء في الوقت الفعلي ورفع الإنتاجية.{" "}
           </p>
         </div>
-        <div className="bg-[#0D0D0D80] max-w-[380px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
+        <div className="bg-[#0D0D0D80] min-h-[285px] flex flex-col gap-6 px-6 py-8 rounded-[20px] m-auto">
           <div>
             <Image src={feature3} alt="feature-3" />
           </div>

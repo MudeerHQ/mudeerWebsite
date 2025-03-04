@@ -39,7 +39,7 @@ export default function ContactSales() {
   }, []);
 
   return (
-    <div dir="rtl" className="pt-[20px] px-[100px] grid justify-center">
+    <div dir="rtl" className="pt-[20px] px-[100px] max-md:px-0 grid justify-center bg-[#F5F5F4]">
       {/* Grid for the main content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center py-16 lg:py-32 px-4 lg:px-[120px]">
         {/* Left Section */}
@@ -97,7 +97,7 @@ export default function ContactSales() {
 
       <div className="flex flex-col justify-center items-center gap-16 mt-20">
         <div className="m-auto text-6xl font-semibold">لماذا تختار مدير؟</div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 sm:px-12 md:px-24 gap-6 sm:gap-10 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-6 sm:px-0 md:px-0 gap-6 sm:gap-10 md:gap-20">
           <div className="flex flex-col gap-4 justify-center items-center">
             <div>
               <svg

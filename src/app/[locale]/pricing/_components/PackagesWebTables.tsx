@@ -18,7 +18,7 @@ import { Check, Info } from "lucide-react";
 export default function PackagesWebTables() {
   return (
     <div className="py-20 mb-10">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mb-8">
         <h3 className="text-[64px] font-semibold max-sm:text-3xl">
           مقارنة الباقات
         </h3>

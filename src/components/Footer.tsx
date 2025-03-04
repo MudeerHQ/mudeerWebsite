@@ -7,17 +7,17 @@ import logoFooter from "./../app/assets/logo-footer.png";
 export default function Footer() {
   return (
     <div
-      className=" overflow-hidden h-auto pt-[100px] md:pt-[240px] pb-[80px] rounded-t-[60px] max-sm:rounded-t-[30px] bg-[#09090B] bg-top bg-no-repeat flex flex-col justify-center items-center gap-20 max-sm:gap-0"
+      className=" overflow-hidden h-auto pt-[100px] md:pt-[150px] pb-[80px] rounded-t-[60px] max-sm:rounded-t-[30px] bg-[#09090B] bg-top bg-no-repeat flex flex-col justify-center items-center gap-20 max-sm:gap-0"
       style={{ backgroundImage: `url(${backFooter.src})` }}
       dir="rtl"
     >
       <div className="flex flex-col gap-2 text-center px-4">
         <div className="flex flex-col justify-center items-center gap-8">
-          <span className="text-white text-[30px] md:text-[82px] font-semibold">
+          <span className="text-white text-[30px] md:text-[70px] font-semibold">
             ابدأ اليوم مع مدير
           </span>
-          <span className="text-white text-[25px] md:text-[79px] font-light">
-            .كل مشاريعك وأهدافك في مكان واحد
+          <span className="text-white text-[25px] md:text-[64px] font-light">
+          كل مشاريعك وأهدافك في مكان واحد.
           </span>
         </div>
         <div
@@ -37,7 +37,7 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="grid gap-[30px] md:gap-[60px]  ">
+      <div className="grid gap-[30px] md:gap-[60px] ">
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-[40px] md:gap-[100px]">
           {[
             {
