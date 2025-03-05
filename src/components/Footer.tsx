@@ -11,7 +11,7 @@ export default function Footer() {
       style={{ backgroundImage: `url(${backFooter.src})` }}
       dir="rtl"
     >
-      <div className="flex flex-col gap-2 text-center px-4">
+      <div className="flex flex-col gap-2 text-center px-8">
         <div className="flex flex-col justify-center items-center gap-8">
           <span className="text-white text-[30px] md:text-[70px] font-semibold">
             ابدأ اليوم مع مدير

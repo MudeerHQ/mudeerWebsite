@@ -1,53 +1,55 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useLocale } from "next-intl";
 import { ArrowLeft } from "lucide-react";
-import Image from "next/image";
-import value1 from "../../../assets/value1.png";
-import value2 from "../../../assets/value2.png";
-import value3 from "../../../assets/value3.png";
-import value4 from "../../../assets/value4.png";
-import value5 from "../../../assets/value5.png";
-import value6 from "../../../assets/value6.png";
-import value7 from "../../../assets/value7.png";
-import value8 from "../../../assets/value8.png";
+import {
+  CooperationIcon,
+  CuriosityIcon,
+  EmpathyIcon,
+  EmpowermentIcon,
+  MasteryIcon,
+  OriginalityIcon,
+  SimplicityIcon,
+  TransparencyIcon,
+} from "@/components/Icons";
 const values = [
   {
-    img: value1,
+    icon: <TransparencyIcon />,
     title: "الشفافية",
     desc: "الوضوح جوهر كل ما نقوم به، من خلال ضمان معرفة كل فرد «من يقوم بماذا، ومتى، ولماذا»، نخلق بيئة عمل إيجابية.",
   },
   {
-    img: value2,
+    icon: <CooperationIcon />,
     title: "التعاون",
     desc: "نؤمن أن العمل الجماعي مفتاح النجاح، «نحن» قبل «الأنا»، نضع الفريق في المقام الأول، ونركّز على الأهداف المشتركة.",
   },
   {
-    img: value3,
+    icon: <EmpathyIcon />,
     title: "التعاطف",
     desc: "نقضي الوقت في الاستماع وفهم وتقدير وجهات النظر المختلفة، من العملاء والزملاء والشركاء؛ نبني ثقافة عمل إنسانية.",
   },
   {
-    img: value4,
+    icon: <MasteryIcon />,
     title: "الإتقان",
     desc: "نوازن بين السرعة والإتقان، لنثبت أن العمل العاجل لا يعني التنازل عن الجودة دون التهاون أو إهمال التفاصيل.",
   },
   {
-    img: value5,
+    icon: <OriginalityIcon />,
     title: "الأصالة",
     desc: "نفخر بمن نحن وما نمثّله. الأصالة هي ما يميزنا عن غيرنا من خلال التزامنا بمبادئنا وبناء علاقات حقيقية وبيئات عمل صحيّة.",
   },
   {
-    img: value6,
+    icon: <SimplicityIcon />,
     title: "البساطة",
     desc: "أساس كل ما نصنعه، من تصميم منتجاتنا إلى طريقة العمل، تقديم تجارب تُشعِر الجميع بالرضا والتحكّم والتركيز على ما يهم فعلاً.",
   },
   {
-    img: value7,
+    icon: <EmpowermentIcon />,
     title: "التمكين",
     desc: "نؤمن بالأشخاص، ونتحمّل المسؤولية، ونعطي الناس حرية القيام بعملهم وتوفير كل الأدوات اللازمة لتحقيق أقصى إمكاناتهم.",
   },
   {
-    img: value8,
+    icon: <CuriosityIcon />,
     title: "الفضول",
     desc: "نحبّ التحديات والتجارب، نبحث ونستكشف ونتعلّم دائمًا، لا نخشي المغامرات، بيئة عملنا مصمّمة لذلك، والفرص العظيمة تأتي من هنا.",
   },
@@ -95,16 +97,18 @@ export default function AboutValues() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 md:px-20  max-md:mb-40 max-sm:mb-24">
-          {values.map(({ img, title, desc }, index) => (
+          {values.map((value: any, index) => (
             <div
               key={index}
               className="bg-[#E5EBFF] px-8 py-8 pb-16 rounded-[28px] min-h-[310px] max-w-[310px] max-sm:max-w-[360px] flex flex-col gap-4 m-auto"
             >
-              <Image src={img} alt={`value-${index + 1}`} />
+              <div>{value.icon}</div>
               <h4 className="text-[22px] font-semibold text-[#0D0D0D]">
-                {title}
+                {value.title}
               </h4>
-              <p className="text-base font-normal text-[#0D0D0D]">{desc}</p>
+              <p className="text-base font-normal text-[#0D0D0D]">
+                {value.desc}
+              </p>
             </div>
           ))}
         </div>
