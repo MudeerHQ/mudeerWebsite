@@ -23,6 +23,7 @@
 
 import { Suspense } from "react";
 import LocaleSwitcherButton from "./LocaleSwitcherButton"; // Ensure the correct import path
+import { Globe } from "lucide-react";
 
 export default function LocaleSwitcherWrapper({
   currentLocale,
@@ -32,7 +33,7 @@ export default function LocaleSwitcherWrapper({
   label: string;
 }) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div><Globe size={20} strokeWidth={1.25} /></div>}>
       <LocaleSwitcherButton currentLocale={currentLocale} label={label} />
     </Suspense>
   );
