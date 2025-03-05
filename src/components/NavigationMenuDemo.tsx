@@ -37,7 +37,7 @@ export function NavigationMenuDemo() {
 
   return (
     <div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[85%] max-md:px-4"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[97%] max-md:px-4"
       dir={locale === "ar" ? "rtl" : "ltr"}
     >
       <Link href="/">
@@ -934,7 +934,7 @@ export function NavigationMenuDemo() {
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`px-2 py-2 text-base font-semibold cursor-pointer`}
+                  className={`hover:bg-accent  hover:py-1 rounded-sm px-2 py-2 text-base font-semibold cursor-pointer`}
                 >
                   {t("title2")}
                 </NavigationMenuLink>
@@ -1075,7 +1075,7 @@ export function NavigationMenuDemo() {
             <NavigationMenuItem>
               <Link href="/enterprise" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`px-2 py-2 text-base font-semibold cursor-pointer ${
+                  className={`hover:bg-accent  hover:py-1 rounded-sm px-2 py-2 text-base font-semibold cursor-pointer ${
                     pathname.startsWith("/enterprise") ? "text-[#CCAD00]" : ""
                   }`}
                 >
@@ -1086,7 +1086,7 @@ export function NavigationMenuDemo() {
             <NavigationMenuItem>
               <Link href="/pricing" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`px-2 py-2 flex items-center gap-1 text-base font-semibold cursor-pointer ${
+                  className={`hover:bg-accent  hover:py-1 rounded-sm px-2 py-2 flex items-center gap-1 text-base font-semibold cursor-pointer ${
                     pathname.startsWith("/pricing") ? "text-[#CCAD00]" : ""
                   }`}
                 >
@@ -1097,7 +1097,7 @@ export function NavigationMenuDemo() {
             <NavigationMenuItem>
               <Link href="/about-mudeer" legacyBehavior passHref>
                 <NavigationMenuLink
-                  className={`px-2 py-2 flex items-center gap-1 text-base font-semibold cursor-pointer ${
+                  className={`hover:bg-accent  hover:py-1 rounded-sm px-2 py-2 flex items-center gap-1 text-base font-semibold cursor-pointer ${
                     pathname.startsWith("/about-mudeer") ? "text-[#CCAD00]" : ""
                   }`}
                 >
@@ -1208,6 +1208,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/features/projects"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1266,6 +1269,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/features/reporting"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1295,6 +1301,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/features/my-tasks"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1338,6 +1347,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/features/goals"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1383,6 +1395,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1457,6 +1472,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1492,6 +1510,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1573,6 +1594,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/features/inbox"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1630,6 +1654,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1685,6 +1712,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1732,7 +1762,12 @@ export function NavigationMenuDemo() {
             </div>
           </li>
           <li>
-            <span className="block py-2  text-base font-semibold cursor-pointer">
+            <span
+              className="block py-2  text-base font-semibold cursor-pointer"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               {t("title2")}
             </span>
           </li>
@@ -1759,6 +1794,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/blog"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1789,6 +1827,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/blog/release-notes"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1819,6 +1860,9 @@ export function NavigationMenuDemo() {
                       <Link
                         href="/help"
                         className="flex justify-start items-start gap-4"
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
                       >
                         <div>
                           <svg
@@ -1838,7 +1882,12 @@ export function NavigationMenuDemo() {
                           </svg>
                         </div>
                         <div className="flex flex-col gap-1">
-                          <span className="text-base text-[#010101] font-semibold">
+                          <span
+                            className="text-base text-[#010101] font-semibold"
+                            onClick={() => {
+                              setIsOpen(false);
+                            }}
+                          >
                             {t("li18")}{" "}
                           </span>
                           <span className="text-base text-[#010101] font-light">
@@ -1853,19 +1902,45 @@ export function NavigationMenuDemo() {
             </div>
           </li>
           <li>
-            <span className="block py-2  text-base font-semibold cursor-pointer">
-              {t("title4")}
-            </span>
+            <Link
+              href="/enterprise"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <span className="block py-2  text-base font-semibold cursor-pointer">
+                {t("title4")}
+              </span>
+            </Link>
           </li>
           <li>
-            <span className="block py-2  text-base font-semibold cursor-pointer">
-              {t("title5")}
-            </span>
+            <Link
+              href={"/pricing"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <span className="block py-2  text-base font-semibold cursor-pointer">
+                {t("title5")}
+              </span>
+            </Link>
           </li>
           <li>
-            <span className="block py-2  text-base font-semibold cursor-pointer">
-              {t("title6")}
-            </span>
+            <Link
+              href={"/about-mudeer"}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <span
+                className="block py-2  text-base font-semibold cursor-pointer"
+                onClick={() => {
+                  setIsOpen(false);
+                }}
+              >
+                {t("title6")}
+              </span>
+            </Link>
           </li>
         </ul>
         <div className="py-4 px-3 flex flex-col gap-4">
@@ -1904,7 +1979,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent  focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
