@@ -4,7 +4,7 @@ import { API_URL } from '../Conf';
 export function getApiUrl(url: string) {
   return `${API_URL}${url}`;
 }
-
+//TODO: MUST REMOVE THIS LINE 
 export function formatDate(timestamp: any) {
     const date = new Date(timestamp);
     const year = date.getFullYear();
