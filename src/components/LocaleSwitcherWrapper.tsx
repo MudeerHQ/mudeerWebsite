@@ -33,7 +33,7 @@ export default function LocaleSwitcherWrapper({
   label: string;
 }) {
   return (
-    <Suspense fallback={<div><Globe size={20} strokeWidth={1.25} /></div>}>
+    <Suspense fallback={<div><Globe size={20} strokeWidth={1.25} className="text-gray-400" /></div>}>
       <LocaleSwitcherButton currentLocale={currentLocale} label={label} />
     </Suspense>
   );
