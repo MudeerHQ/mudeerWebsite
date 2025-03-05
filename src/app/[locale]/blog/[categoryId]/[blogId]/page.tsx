@@ -1,17 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React from "react";
 import user from "../../../../assets/user.png";
 import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
-import blog14 from "../../../../assets/blog14.png";
-import blog8 from "../../../../assets/blog8.png";
-import blog9 from "../../../../assets/blog9.png";
 import { useParams } from "next/navigation";
 import { formatDate, getApiUrl, getImageSrc } from "@/helpers";
 import { useQuery } from "@tanstack/react-query";
 import { EditorProvider, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit"; // Required extension
+import { Link } from "@/i18n/routing";
 
 const fetchBlogsById = async (blogId: string) => {
   const res = await fetch(getApiUrl(`/bloger/${blogId}`));
@@ -104,35 +103,32 @@ export default function BlogId() {
       </div>
 
       <EditorProvider
-      editable={false} 
+        editable={false}
         extensions={[StarterKit]} // Ensure schema is provided
         content={data?.canvas?.content || "<p>لا يوجد محتوى</p>"} // Avoid empty content
       >
         <EditorContent editor={null} />
       </EditorProvider>
 
-      {/* <div className="flex flex-col gap-6 my-20">
+      <div className="flex flex-col gap-6 my-20">
         <div className="text-[#0D0D0D] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold">
           مواضيع ذات صلة
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <BlogCard
-            img={blog14}
-            title="تقديم أكثر شمولاً تجارب مدير"
-            description="29 ديسمبر، 2024"
-          />
-          <BlogCard
-            img={blog8}
-            title="مدير يجمع 2.6 مليون دولار..."
-            description="29 ديسمبر، 2024"
-          />
-          <BlogCard
-            img={blog9}
-            title="تقديم أكثر شمولاً تجارب مدير"
-            description="29 ديسمبر، 2024"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {data?.related?.map((blog: any, index: any) => (
+            <div key={index}>
+              <Link href={`/blog/${data.slug_url}/${blog.slug_url}`}>
+                <BlogCard
+                  key={blog.id}
+                  img={getImageSrc(blog.cover)}
+                  title={blog.title}
+                  description={formatDate(blog.updatedAt)}
+                />
+              </Link>
+            </div>
+          ))}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

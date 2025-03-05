@@ -1,3 +1,4 @@
+/* @import url("/font/stylesheet.css"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -187,3 +188,122 @@
     margin: 0 ;
   }
 }
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Black.eot');
+  src: local('GraphikArabicBlack'), local('GraphikArabic-Black'),
+      url('/fonts/GraphikArabic-Black.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Black.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Black.woff') format('woff'),
+      url('/fonts/GraphikArabic-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Bold.eot');
+  src: local('GraphikArabicBold'), local('GraphikArabic-Bold'),
+      url('/fonts/GraphikArabic-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Bold.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Bold.woff') format('woff'),
+      url('/fonts/GraphikArabic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Extralight.eot');
+  src: local('GraphikArabicExtralight'), local('GraphikArabic-Extralight'),
+      url('/fonts/GraphikArabic-Extralight.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Extralight.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Extralight.woff') format('woff'),
+      url('/fonts/GraphikArabic-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Light.eot');
+  src: local('GraphikArabicLight'), local('GraphikArabic-Light'),
+      url('/fonts/GraphikArabic-Light.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Light.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Light.woff') format('woff'),
+      url('/fonts/GraphikArabic-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Medium.eot');
+  src: local('GraphikArabicMedium'), local('GraphikArabic-Medium'),
+      url('/fonts/GraphikArabic-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Medium.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Medium.woff') format('woff'),
+      url('/fonts/GraphikArabic-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Regular.eot');
+  src: local('GraphikArabicRegular'), local('GraphikArabic-Regular'),
+      url('/fonts/GraphikArabic-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Regular.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Regular.woff') format('woff'),
+      url('/fonts/GraphikArabic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Thin.eot');
+  src: local('GraphikArabicThin'), local('GraphikArabic-Thin'),
+      url('/fonts/GraphikArabic-Thin.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Thin.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Thin.woff') format('woff'),
+      url('/fonts/GraphikArabic-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Super.eot');
+  src: local('GraphikArabicSuper'), local('GraphikArabic-Super'),
+      url('/fonts/GraphikArabic-Super.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Super.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Super.woff') format('woff'),
+      url('/fonts/GraphikArabic-Super.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik Arabic';
+  src: url('/fonts/GraphikArabic-Semibold.eot');
+  src: local('GraphikArabicSemibold'), local('GraphikArabic-Semibold'),
+      url('/fonts/GraphikArabic-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/GraphikArabic-Semibold.woff2') format('woff2'),
+      url('/fonts/GraphikArabic-Semibold.woff') format('woff'),
+      url('/fonts/GraphikArabic-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
