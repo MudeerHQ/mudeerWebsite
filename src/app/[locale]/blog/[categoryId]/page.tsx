@@ -45,7 +45,7 @@ export default function CategoryId() {
   }
 
   return (
-    <div className="px-[100px] -mb-12 grid justify-center pb-32 bg-[#F5F5F4]" dir="rtl">
+    <div className="px-[100px] -mb-12 grid justify-center pb-32 bg-[#F5F5F4] max-sm:px-[30px]" dir="rtl">
       <PageHeader title={data?.title} description={data?.description} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data?.posts?.map((blog: any, index: any) => (

@@ -6,7 +6,7 @@ import HomeWays from "./_components/HomeWays";
 
 export default function Home() {
   return (
-    <div >
+    <div className="bg-[#F5F5F4]">
       <HomeHeader />
       <HomeMissions />
       <HomeWays />

@@ -15,7 +15,7 @@ export default function Pricing() {
 
   return (
     <div
-      className="bg-no-repeat bg-top bg-[#F5F5F4]"
+      className="bg-no-repeat bg-top bg-[#F5F5F4] min-h-screen overflow-x-hidden"
       style={{ backgroundImage: `url(${backHeader.src})` }}
       dir={locale === "ar" ? "rtl" : "ltr"} // Set direction dynamically
     >

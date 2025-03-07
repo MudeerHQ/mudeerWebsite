@@ -15,14 +15,7 @@ import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 import LocaleSwitcherWrapper from "./LocaleSwitcherWrapper";
-import {
-  ArrowLeft,
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Menu,
-  X,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import backNavbar from "../app/assets/bg-navbar.png";
 
@@ -37,7 +30,7 @@ export function NavigationMenuDemo() {
 
   return (
     <div
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[97%] max-md:px-4"
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-between items-center rounded-xl bg-[#FFFFFF] px-6 py-2 border border-[#F4F4F5] w-[85%] max-lg:w-[95%] max-md:w-[94%] max-md:px-4"
       dir={locale === "ar" ? "rtl" : "ltr"}
     >
       <Link href="/">
@@ -85,7 +78,7 @@ export function NavigationMenuDemo() {
         <NavigationMenu>
           <NavigationMenuList dir={locale === "ar" ? "rtl" : "ltr"}>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="flex items-center gap-1 text-base font-semibold cursor-pointer">
+              <NavigationMenuTrigger className=" flex items-center gap-1 text-base font-semibold cursor-pointer">
                 {t("title1")}
               </NavigationMenuTrigger>
               <NavigationMenuContent dir={locale === "ar" ? "ltr" : "rtl"}>
@@ -104,7 +97,7 @@ export function NavigationMenuDemo() {
                             dir={locale === "ar" ? "rtl" : "ltr"}
                           >
                             <li className="font-semibold text-lg text-[#FFFFFF] flex items-center gap-1 mb-3">
-                              مقياس بثقة مع المؤسسة{" "}
+                              {t("li20")}{" "}
                             </li>
 
                             <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
@@ -151,7 +144,53 @@ export function NavigationMenuDemo() {
                                   </clipPath>
                                 </defs>
                               </svg>
-                              عملك في مكان واحد
+                              {t("li21")}
+                            </li>
+                            <li className="font-light text-[12px] text-[#FFFFFF] flex items-center gap-1">
+                              <svg
+                                width="15"
+                                height="16"
+                                viewBox="0 0 15 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <mask
+                                  id="mask0_6632_1868"
+                                  maskUnits="userSpaceOnUse"
+                                  x="0"
+                                  y="0"
+                                  width="15"
+                                  height="16"
+                                >
+                                  <g clipPath="url(#clip0_6632_1868)">
+                                    <path
+                                      fillRule="evenodd"
+                                      clipRule="evenodd"
+                                      d="M11.8897 4.18964C12.2682 4.54292 12.2887 5.13616 11.9353 5.51467L6.68536 11.1397C6.50806 11.3297 6.25986 11.4375 6 11.4375C5.74014 11.4375 5.49194 11.3297 5.31464 11.1397L3.06464 8.72896C2.71136 8.35045 2.73181 7.75721 3.11033 7.40392C3.48885 7.05064 4.08208 7.0711 4.43536 7.44961L6 9.126L10.5647 4.23533C10.9179 3.85681 11.5112 3.83636 11.8897 4.18964Z"
+                                      fill="#0DF28F"
+                                    />
+                                  </g>
+                                </mask>
+                                <g mask="url(#mask0_6632_1868)">
+                                  <rect
+                                    y="0.5"
+                                    width="15"
+                                    height="15"
+                                    fill="#0BDA81"
+                                  />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_6632_1868">
+                                    <rect
+                                      width="15"
+                                      height="15"
+                                      fill="white"
+                                      transform="translate(0 0.5)"
+                                    />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                              {t("li22")}{" "}
                             </li>
                             <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
                               <svg
@@ -197,7 +236,7 @@ export function NavigationMenuDemo() {
                                   </clipPath>
                                 </defs>
                               </svg>
-                              اهتم بالتنفيذ، لا التخطيط{" "}
+                              {t("li23")}{" "}
                             </li>
                             <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
                               <svg
@@ -243,7 +282,7 @@ export function NavigationMenuDemo() {
                                   </clipPath>
                                 </defs>
                               </svg>
-                              تعزيز التعاون داخل الفريق{" "}
+                              {t("li24")}{" "}
                             </li>
                             <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
                               <svg
@@ -289,7 +328,7 @@ export function NavigationMenuDemo() {
                                   </clipPath>
                                 </defs>
                               </svg>
-                              اعمل مع أدواتك المفضلة{" "}
+                              {t("li25")}{" "}
                             </li>
                             <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
                               <svg
@@ -335,58 +374,12 @@ export function NavigationMenuDemo() {
                                   </clipPath>
                                 </defs>
                               </svg>
-                              اتخاذ قرارات أفضل{" "}
-                            </li>
-                            <li className="font-light text-sm text-[#FFFFFF] flex items-center gap-1">
-                              <svg
-                                width="15"
-                                height="16"
-                                viewBox="0 0 15 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <mask
-                                  id="mask0_6632_1868"
-                                  maskUnits="userSpaceOnUse"
-                                  x="0"
-                                  y="0"
-                                  width="15"
-                                  height="16"
-                                >
-                                  <g clipPath="url(#clip0_6632_1868)">
-                                    <path
-                                      fillRule="evenodd"
-                                      clipRule="evenodd"
-                                      d="M11.8897 4.18964C12.2682 4.54292 12.2887 5.13616 11.9353 5.51467L6.68536 11.1397C6.50806 11.3297 6.25986 11.4375 6 11.4375C5.74014 11.4375 5.49194 11.3297 5.31464 11.1397L3.06464 8.72896C2.71136 8.35045 2.73181 7.75721 3.11033 7.40392C3.48885 7.05064 4.08208 7.0711 4.43536 7.44961L6 9.126L10.5647 4.23533C10.9179 3.85681 11.5112 3.83636 11.8897 4.18964Z"
-                                      fill="#0DF28F"
-                                    />
-                                  </g>
-                                </mask>
-                                <g mask="url(#mask0_6632_1868)">
-                                  <rect
-                                    y="0.5"
-                                    width="15"
-                                    height="15"
-                                    fill="#0BDA81"
-                                  />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_6632_1868">
-                                    <rect
-                                      width="15"
-                                      height="15"
-                                      fill="white"
-                                      transform="translate(0 0.5)"
-                                    />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                              إنتاجية وتركيز أعلى{" "}
+                              {t("li26")}{" "}
                             </li>
                           </ul>
                         </div>
                         <div className="bg-[#FFFFFF] rounded-[10px] py-[10px] border-2 border-[#FFFFFF] font-normal text-base cursor-pointer  text-[#0D0D0D] w-[170px] text-center ">
-                          تواصل مع المبيعات
+                          {t("li27")}
                         </div>
                       </div>
                     </NavigationMenuLink>
@@ -397,7 +390,7 @@ export function NavigationMenuDemo() {
                   >
                     <div className="flex flex-col gap-[20px]">
                       <div className="text-base text-[#010101] font-medium">
-                        أدوات إدارة العمل
+                        {t("li19")}
                       </div>
                       <div className="grid grid-cols-[2fr_1.5fr] gap-6">
                         <div className="flex flex-col gap-3">
@@ -458,7 +451,7 @@ export function NavigationMenuDemo() {
                                 {t("li1")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                نظّم، تابع، وأدرّ مشاريعك.
+                                {t("li28")}
                               </span>
                             </div>
                           </Link>
@@ -487,7 +480,7 @@ export function NavigationMenuDemo() {
                                 {t("li2")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                منظّمة وفي متناول يدك دائمًا.
+                                {t("li29")}
                               </span>
                             </div>
                           </Link>
@@ -528,7 +521,7 @@ export function NavigationMenuDemo() {
                                 {t("li3")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                                {t("li30")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -575,7 +568,7 @@ export function NavigationMenuDemo() {
                                 {t("li4")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                خطط، نفّذ وحقق المزيد.{" "}
+                                {t("li31")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -649,7 +642,7 @@ export function NavigationMenuDemo() {
                                 {t("li5")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                اعمل بذكاء وأنجز المزيد.{" "}
+                                {t("li32")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -676,7 +669,7 @@ export function NavigationMenuDemo() {
                                 {t("li6")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                منظّمة وفي متناول يدك دائمًا.{" "}
+                                {t("li33")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -685,7 +678,7 @@ export function NavigationMenuDemo() {
                     </div>
                     <div className="mt-6 grid grid-cols-[2fr_1.5fr] gap-6">
                       <div className="flex flex-col gap-4">
-                        <div>التعاون</div>
+                        <div>{t("li34")}</div>
                         <div>
                           {" "}
                           <Link
@@ -763,7 +756,7 @@ export function NavigationMenuDemo() {
                                 {t("li7")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                مساحة لكل فكرة، ولكل نقاش.{" "}
+                                {t("li35")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -816,14 +809,14 @@ export function NavigationMenuDemo() {
                                 {t("li8")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                مصمّمة للأفراد. لتركيز أعلى.{" "}
+                                {t("li36")}{" "}
                               </span>
                             </div>
                           </Link>
                         </div>
                       </div>
                       <div className="flex flex-col gap-4">
-                        <div>ميزات متقدمة</div>
+                        <div>{t("li37")}</div>
                         <div>
                           {" "}
                           <Link
@@ -875,7 +868,7 @@ export function NavigationMenuDemo() {
                                 {t("li9")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                                {t("li38")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -915,7 +908,7 @@ export function NavigationMenuDemo() {
                                 {t("li10")}
                               </span>
                               <span className="text-base text-[#010101] font-light">
-                                ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                                {t("li39")}{" "}
                               </span>
                             </div>
                           </Link>
@@ -975,7 +968,7 @@ export function NavigationMenuDemo() {
                         {t("li16")}
                       </span>
                       <span className="text-base text-[#010101] font-light">
-                        نظّم، تابع، وأدرّ مشاريعك.{" "}
+                        {t("li41")}{" "}
                       </span>
                     </div>
                   </Link>
@@ -985,18 +978,18 @@ export function NavigationMenuDemo() {
                   >
                     <div>
                       <svg
-                        width="20"
-                        height="21"
-                        viewBox="0 0 20 21"
+                        width="18"
+                        height="19"
+                        viewBox="0 0 18 19"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M8.55648 17.59C8.70276 17.8433 8.91316 18.0537 9.16651 18.2C9.41987 18.3462 9.70726 18.4232 9.99981 18.4232C10.2924 18.4232 10.5798 18.3462 10.8331 18.2C11.0865 18.0537 11.2969 17.8433 11.4431 17.59M12.4998 6.75663H17.4998M14.9998 4.25663V9.25663M16.6681 12.1433C16.8578 12.3957 17.0632 12.6359 17.2831 12.8625C17.3918 12.9819 17.4635 13.1304 17.4893 13.2898C17.5152 13.4492 17.4942 13.6127 17.4289 13.7604C17.3636 13.9081 17.2567 14.0336 17.1214 14.1217C16.986 14.2098 16.828 14.2567 16.6665 14.2566H3.33314C3.17164 14.2567 3.01361 14.2098 2.87826 14.1217C2.7429 14.0336 2.63606 13.9081 2.57074 13.7604C2.50541 13.6127 2.4844 13.4492 2.51028 13.2898C2.53615 13.1304 2.60779 12.9819 2.71648 12.8625C3.82481 11.72 4.99981 10.5058 4.99981 6.75663C4.99991 5.89912 5.22055 5.05604 5.64052 4.3084C6.0605 3.56077 6.6657 2.93372 7.39797 2.48749C8.13024 2.04127 8.96497 1.79087 9.82194 1.76037C10.6789 1.72986 11.5293 1.92027 12.2915 2.3133"
+                          d="M14.9998 2.34003V5.34003M16.4998 3.84003H13.4998M2.99983 12.84V14.34M3.74983 13.59H2.24983M7.45258 11.715C7.38562 11.4555 7.25034 11.2186 7.0608 11.0291C6.87125 10.8395 6.63439 10.7042 6.37483 10.6373L1.77358 9.45078C1.69508 9.4285 1.62599 9.38122 1.57679 9.31611C1.52759 9.25101 1.50098 9.17163 1.50098 9.09003C1.50098 9.00843 1.52759 8.92905 1.57679 8.86395C1.62599 8.79884 1.69508 8.75156 1.77358 8.72928L6.37483 7.54203C6.63429 7.47514 6.8711 7.33996 7.06063 7.15056C7.25017 6.96116 7.38551 6.72445 7.45258 6.46503L8.63908 1.86378C8.66114 1.78497 8.70837 1.71554 8.77357 1.66608C8.83878 1.61662 8.91837 1.58984 9.00021 1.58984C9.08205 1.58984 9.16164 1.61662 9.22684 1.66608C9.29204 1.71554 9.33928 1.78497 9.36133 1.86378L10.5471 6.46503C10.614 6.72458 10.7493 6.96145 10.9389 7.15099C11.1284 7.34053 11.3653 7.47582 11.6248 7.54278L16.2261 8.72853C16.3052 8.75035 16.375 8.79754 16.4247 8.86284C16.4744 8.92814 16.5014 9.00795 16.5014 9.09003C16.5014 9.17211 16.4744 9.25192 16.4247 9.31722C16.375 9.38252 16.3052 9.42971 16.2261 9.45153L11.6248 10.6373C11.3653 10.7042 11.1284 10.8395 10.9389 11.0291C10.7493 11.2186 10.614 11.4555 10.5471 11.715L9.36058 16.3163C9.33853 16.3951 9.29129 16.4645 9.22609 16.514C9.16089 16.5634 9.0813 16.5902 8.99946 16.5902C8.91762 16.5902 8.83803 16.5634 8.77282 16.514C8.70762 16.4645 8.66039 16.3951 8.63833 16.3163L7.45258 11.715Z"
                           stroke="#09090B"
-                          strokeWidth="1.33333"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                          stroke-width="0.9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
                         />
                       </svg>
                     </div>
@@ -1005,7 +998,7 @@ export function NavigationMenuDemo() {
                         {t("li17")}
                       </span>
                       <span className="text-base text-[#010101] font-light">
-                        منظّمة وفي متناول يدك دائمًا.{" "}
+                        {t("li42")}{" "}
                       </span>
                     </div>
                   </Link>
@@ -1022,11 +1015,11 @@ export function NavigationMenuDemo() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M11.6668 1.85657V5.1899C11.6668 5.63193 11.8424 6.05585 12.155 6.36841C12.4675 6.68097 12.8915 6.85657 13.3335 6.85657H16.6668M8.3335 7.6899H6.66683M13.3335 11.0232H6.66683M13.3335 14.3566H6.66683M12.5002 1.85657H5.00016C4.55814 1.85657 4.13421 2.03216 3.82165 2.34472C3.50909 2.65728 3.3335 3.08121 3.3335 3.52323V16.8566C3.3335 17.2986 3.50909 17.7225 3.82165 18.0351C4.13421 18.3476 4.55814 18.5232 5.00016 18.5232H15.0002C15.4422 18.5232 15.8661 18.3476 16.1787 18.0351C16.4912 17.7225 16.6668 17.2986 16.6668 16.8566V6.02323L12.5002 1.85657Z"
+                          d="M7.57484 7.68978C7.77076 7.13283 8.15746 6.6632 8.66647 6.36406C9.17547 6.06491 9.77392 5.95556 10.3558 6.05537C10.9377 6.15518 11.4655 6.45772 11.8457 6.90939C12.226 7.36105 12.4341 7.93271 12.4332 8.52311C12.4332 10.1898 9.93317 11.0231 9.93317 11.0231M9.99984 14.3564H10.0082M18.3332 10.1898C18.3332 14.7922 14.6022 18.5231 9.99984 18.5231C5.39746 18.5231 1.6665 14.7922 1.6665 10.1898C1.6665 5.58741 5.39746 1.85645 9.99984 1.85645C14.6022 1.85645 18.3332 5.58741 18.3332 10.1898Z"
                           stroke="#09090B"
-                          strokeWidth="1.33333"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                          stroke-width="1.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
                         />
                       </svg>
                     </div>
@@ -1035,7 +1028,7 @@ export function NavigationMenuDemo() {
                         {t("li18")}{" "}
                       </span>
                       <span className="text-base text-[#010101] font-light">
-                        مصمّمة للأفراد. لتركيز أعلى.{" "}
+                        {t("li43")}{" "}
                       </span>
                     </div>
                   </Link>
@@ -1052,20 +1045,20 @@ export function NavigationMenuDemo() {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M11.6668 1.85657V5.1899C11.6668 5.63193 11.8424 6.05585 12.155 6.36841C12.4675 6.68097 12.8915 6.85657 13.3335 6.85657H16.6668M8.3335 7.6899H6.66683M13.3335 11.0232H6.66683M13.3335 14.3566H6.66683M12.5002 1.85657H5.00016C4.55814 1.85657 4.13421 2.03216 3.82165 2.34472C3.50909 2.65728 3.3335 3.08121 3.3335 3.52323V16.8566C3.3335 17.2986 3.50909 17.7225 3.82165 18.0351C4.13421 18.3476 4.55814 18.5232 5.00016 18.5232H15.0002C15.4422 18.5232 15.8661 18.3476 16.1787 18.0351C16.4912 17.7225 16.6668 17.2986 16.6668 16.8566V6.02323L12.5002 1.85657Z"
+                          d="M3.33325 11.9465C3.17555 11.947 3.02094 11.9028 2.88737 11.819C2.75381 11.7352 2.64677 11.6151 2.5787 11.4729C2.51063 11.3306 2.48432 11.172 2.50283 11.0154C2.52133 10.8588 2.5839 10.7106 2.68325 10.5882L10.9332 2.08817C10.9951 2.01674 11.0795 1.96847 11.1724 1.95128C11.2653 1.9341 11.3613 1.94902 11.4447 1.99359C11.528 2.03817 11.5937 2.10975 11.631 2.1966C11.6683 2.28344 11.675 2.38038 11.6499 2.47151L10.0499 7.48817C10.0027 7.61444 9.98689 7.75027 10.0037 7.88401C10.0206 8.01775 10.0696 8.14541 10.1467 8.25603C10.2237 8.36665 10.3264 8.45693 10.446 8.51914C10.5656 8.58134 10.6985 8.61361 10.8332 8.61317H16.6666C16.8243 8.61263 16.9789 8.65685 17.1125 8.74069C17.246 8.82453 17.3531 8.94454 17.4211 9.08679C17.4892 9.22904 17.5155 9.38768 17.497 9.54429C17.4785 9.7009 17.4159 9.84904 17.3166 9.97151L9.06658 18.4715C9.00469 18.5429 8.92036 18.5912 8.82743 18.6084C8.73449 18.6256 8.63848 18.6107 8.55514 18.5661C8.4718 18.5215 8.40609 18.4499 8.3688 18.3631C8.33151 18.2762 8.32485 18.1793 8.34991 18.0882L9.94991 13.0715C9.99709 12.9452 10.0129 12.8094 9.99609 12.6757C9.97924 12.5419 9.9302 12.4143 9.85317 12.3037C9.77615 12.193 9.67343 12.1027 9.55385 12.0405C9.43426 11.9783 9.30137 11.9461 9.16658 11.9465H3.33325Z"
                           stroke="#09090B"
-                          strokeWidth="1.33333"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                          stroke-width="1.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
                         />
                       </svg>
                     </div>
                     <div className="flex flex-col gap-1">
                       <span className="text-base text-[#010101] font-semibold">
-                        الكواليس{" "}
+                        {t("li40")}{" "}
                       </span>
                       <span className="text-base text-[#010101] font-light">
-                        مصمّمة للأفراد. لتركيز أعلى.{" "}
+                        {t("li44")}{" "}
                       </span>
                     </div>
                   </Link>
@@ -1121,40 +1114,70 @@ export function NavigationMenuDemo() {
             {t("title7")}
           </div>
         </Link>
-        <Link href="/create-account ">
-          <div className="group w-[150px] relative flex justify-center items-center gap-2 text-[#FFFFFF] bg-[#141414F5] rounded-[10px] py-2 px-3 text-base font-medium cursor-pointer hover:rounded-3xl transition-all duration-300 max-[900px]:text-xs max-[900px]:w-[120px]">
-            {locale === "ar" ? (
-              <ArrowLeft
-                color="#FFFFFF"
-                size={12}
-                className="ml-2 absolute -right-4 group-hover:right-2 transition-all duration-200"
+        <div
+          className={`overflow-hidden relative group hover:${
+            currentLocale === "ar" ? "-translate-x-1" : "translate-x-1"
+          } transition-all duration-300`}
+        >
+          <Link
+            href="/create-account"
+            className="peer py-2 px-3 flex items-center overflow-hidden duration-300 transition-all font-bold text-md bg-[#141414F5] text-white rounded-[10px] relative group-hover:hover:rounded-3xl"
+          >
+            <div
+              className={` transform transition-all duration-300 ${
+                currentLocale === "ar"
+                  ? "group-hover:-translate-x-[1.7em] pl-3"
+                  : "group-hover:translate-x-[1.7em] pr-3"
+              }`}
+            >
+              {t("li45")}
+            </div>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`transition-all duration-300 ${
+                currentLocale === "ar"
+                  ? "group-hover:-translate-x-[3em] rotate-180"
+                  : "group-hover:translate-x-[3em]"
+              }`}
+            >
+              <path
+                d="M16 7.38197L15.4495 7.10674L15.4484 7.10617L15.4455 7.10464L15.4188 7.09062C15.393 7.07688 15.3516 7.05438 15.2965 7.02295C15.1862 6.96006 15.0213 6.86173 14.8166 6.72686C14.4066 6.45661 13.8417 6.0427 13.2383 5.47699C12.029 4.34323 10.6931 2.62752 10.1006 0.257465L8.16032 0.742531C8.87215 3.58987 10.4711 5.62416 11.8704 6.93606C11.8933 6.95756 11.9162 6.97887 11.9391 7H0V9H11.9391C11.9162 9.02112 11.8933 9.04244 11.8704 9.06394C10.4711 10.3758 8.87215 12.4101 8.16032 15.2575L10.1006 15.7425C10.6931 13.3725 12.029 11.6568 13.2383 10.523Z"
+                fill="currentColor"
               />
-            ) : (
-              <ArrowRight
-                color="#FFFFFF"
-                size={12}
-                className="ml-2 absolute -left-5 group-hover:right-2 transition-all duration-200"
+            </svg>
+          </Link>
+          <div
+            className={`absolute text-white ${
+              currentLocale === "ar" ? "right-[-1em]" : "left-[-1em]"
+            } top-1/2 -translate-y-1/2 w-4 h-4 transition-all duration-300`}
+          >
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className={`transition-transform duration-300 ${
+                currentLocale === "ar"
+                  ? "group-hover:-translate-x-[2em] rotate-180"
+                  : "group-hover:translate-x-[2em]"
+              }`}
+            >
+              <path
+                d="M16 7.38197L15.4495 7.10674L15.4484 7.10617L15.4455 7.10464L15.4188 7.09062C15.393 7.07688 15.3516 7.05438 15.2965 7.02295C15.1862 6.96006 15.0213 6.86173 14.8166 6.72686C14.4066 6.45661 13.8417 6.0427 13.2383 5.47699C12.029 4.34323 10.6931 2.62752 10.1006 0.257465L8.16032 0.742531C8.87215 3.58987 10.4711 5.62416 11.8704 6.93606C11.8933 6.95756 11.9162 6.97887 11.9391 7H0V9H11.9391C11.9162 9.02112 11.8933 9.04244 11.8704 9.06394C10.4711 10.3758 8.87215 12.4101 8.16032 15.2575L10.1006 15.7425C10.6931 13.3725 12.029 11.6568 13.2383 10.523Z"
+                fill="currentColor"
               />
-            )}
-            {t("title8")}{" "}
-            {locale === "ar" ? (
-              <ArrowLeft
-                color="#FFFFFF"
-                size={12}
-                className="ml-2 absolute -right-4 group-hover:right-2 transition-all duration-200"
-              />
-            ) : (
-              <ArrowRight
-                color="#FFFFFF"
-                size={12}
-                className="ml-2 absolute -left-5 group-hover:left-1 transition-all duration-200"
-              />
-            )}
+            </svg>
           </div>
-        </Link>
+        </div>
+
         <div
           className={`${
-            locale == "ar" ? "mr-4" : "ml-4"
+            locale == "ar" ? "mr-[6px]" : "ml-[6px]"
           } max-[900px]:block hidden cursor-pointer relative w-8 h-8`}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -1262,7 +1285,7 @@ export function NavigationMenuDemo() {
                             {t("li1")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            نظّم، تابع، وأدرّ مشاريعك.
+                            {t("li28")}
                           </span>
                         </div>
                       </Link>
@@ -1294,7 +1317,7 @@ export function NavigationMenuDemo() {
                             {t("li2")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            منظّمة وفي متناول يدك دائمًا.
+                            {t("li29")}
                           </span>
                         </div>
                       </Link>
@@ -1338,7 +1361,7 @@ export function NavigationMenuDemo() {
                             {t("li3")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                            {t("li30")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1388,7 +1411,7 @@ export function NavigationMenuDemo() {
                             {t("li4")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            خطط، نفّذ وحقق المزيد.{" "}
+                            {t("li31")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1465,7 +1488,7 @@ export function NavigationMenuDemo() {
                             {t("li5")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            اعمل بذكاء وأنجز المزيد.{" "}
+                            {t("li32")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1495,7 +1518,7 @@ export function NavigationMenuDemo() {
                             {t("li6")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            منظّمة وفي متناول يدك دائمًا.{" "}
+                            {t("li33")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1504,7 +1527,7 @@ export function NavigationMenuDemo() {
                 </div>
                 <div className="mt-6 grid grid-cols-1 gap-6">
                   <div className="flex flex-col gap-4">
-                    <div>التعاون</div>
+                    <div>{t("li34")}</div>
                     <div>
                       {" "}
                       <Link
@@ -1585,7 +1608,7 @@ export function NavigationMenuDemo() {
                             {t("li7")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            مساحة لكل فكرة، ولكل نقاش.{" "}
+                            {t("li35")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1641,14 +1664,14 @@ export function NavigationMenuDemo() {
                             {t("li8")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            مصمّمة للأفراد. لتركيز أعلى.{" "}
+                            {t("li36")}{" "}
                           </span>
                         </div>
                       </Link>
                     </div>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <div>ميزات متقدمة</div>
+                    <div>{t("li37")}</div>
                     <div>
                       {" "}
                       <Link
@@ -1703,7 +1726,7 @@ export function NavigationMenuDemo() {
                             {t("li9")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                            {t("li38")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1746,7 +1769,7 @@ export function NavigationMenuDemo() {
                             {t("li10")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            ارفع إنتاجيتك وأدر مشاريعك من مكان واحد.{" "}
+                            {t("li39")}
                           </span>
                         </div>
                       </Link>
@@ -1820,7 +1843,7 @@ export function NavigationMenuDemo() {
                             {t("li16")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            نظّم، تابع، وأدرّ مشاريعك.{" "}
+                            {t("li41")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1853,7 +1876,7 @@ export function NavigationMenuDemo() {
                             {t("li17")}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            منظّمة وفي متناول يدك دائمًا.{" "}
+                            {t("li42")}{" "}
                           </span>
                         </div>
                       </Link>
@@ -1891,7 +1914,37 @@ export function NavigationMenuDemo() {
                             {t("li18")}{" "}
                           </span>
                           <span className="text-base text-[#010101] font-light">
-                            مصمّمة للأفراد. لتركيز أعلى.{" "}
+                            {t("li43")}{" "}
+                          </span>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/"
+                        className="flex justify-start items-start gap-4"
+                      >
+                        <div>
+                          <svg
+                            width="20"
+                            height="21"
+                            viewBox="0 0 20 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M3.33325 11.9465C3.17555 11.947 3.02094 11.9028 2.88737 11.819C2.75381 11.7352 2.64677 11.6151 2.5787 11.4729C2.51063 11.3306 2.48432 11.172 2.50283 11.0154C2.52133 10.8588 2.5839 10.7106 2.68325 10.5882L10.9332 2.08817C10.9951 2.01674 11.0795 1.96847 11.1724 1.95128C11.2653 1.9341 11.3613 1.94902 11.4447 1.99359C11.528 2.03817 11.5937 2.10975 11.631 2.1966C11.6683 2.28344 11.675 2.38038 11.6499 2.47151L10.0499 7.48817C10.0027 7.61444 9.98689 7.75027 10.0037 7.88401C10.0206 8.01775 10.0696 8.14541 10.1467 8.25603C10.2237 8.36665 10.3264 8.45693 10.446 8.51914C10.5656 8.58134 10.6985 8.61361 10.8332 8.61317H16.6666C16.8243 8.61263 16.9789 8.65685 17.1125 8.74069C17.246 8.82453 17.3531 8.94454 17.4211 9.08679C17.4892 9.22904 17.5155 9.38768 17.497 9.54429C17.4785 9.7009 17.4159 9.84904 17.3166 9.97151L9.06658 18.4715C9.00469 18.5429 8.92036 18.5912 8.82743 18.6084C8.73449 18.6256 8.63848 18.6107 8.55514 18.5661C8.4718 18.5215 8.40609 18.4499 8.3688 18.3631C8.33151 18.2762 8.32485 18.1793 8.34991 18.0882L9.94991 13.0715C9.99709 12.9452 10.0129 12.8094 9.99609 12.6757C9.97924 12.5419 9.9302 12.4143 9.85317 12.3037C9.77615 12.193 9.67343 12.1027 9.55385 12.0405C9.43426 11.9783 9.30137 11.9461 9.16658 11.9465H3.33325Z"
+                              stroke="#09090B"
+                              stroke-width="1.33333"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-base text-[#010101] font-semibold">
+                            {t("li40")}{" "}
+                          </span>
+                          <span className="text-base text-[#010101] font-light">
+                            {t("li44")}{" "}
                           </span>
                         </div>
                       </Link>
