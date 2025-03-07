@@ -39,9 +39,12 @@ export default function ContactSales() {
   }, []);
 
   return (
-    <div dir="rtl" className="pt-[20px] px-[100px] max-md:px-0 grid justify-center bg-[#F5F5F4]">
+    <div
+      dir="rtl"
+      className="pt-[20px] px-[100px] max-md:px-0 grid justify-center bg-[#F5F5F4]"
+    >
       {/* Grid for the main content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center py-16 lg:py-32 px-4 lg:px-[120px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center py-16 lg:py-32 px-4 ">
         {/* Left Section */}
         <div className="flex flex-col gap-6 max-sm:px-4">
           <div className="flex flex-col justify-start gap-3">
@@ -84,7 +87,7 @@ export default function ContactSales() {
         </div>
 
         {/* Right Section (Tally Form) */}
-        <div className="bg-white px-4 lg:px-[50px] pt-10 rounded-[40px] flex self-start mt-8 lg:mt-0">
+        <div className="bg-white px-4 lg:px-[25px] pt-10 rounded-[40px] flex self-start mt-8 lg:mt-0">
           <iframe
             data-tally-src="https://tally.so/embed/nr2Nyo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
             loading="lazy"

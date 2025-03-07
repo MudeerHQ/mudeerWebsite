@@ -25,7 +25,7 @@ export default function Questions() {
           {faqData.map((item) => (
             <AccordionItem key={item.id} value={item.id}>
               <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
+              <AccordionContent className="mr-8">{item.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

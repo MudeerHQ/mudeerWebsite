@@ -6,7 +6,6 @@ import effect2 from "../../../assets/effect2.png";
 import effect3 from "../../../assets/effect3.png";
 import backGoals1 from "../../../assets/bg-goals1.png";
 import backGoals2 from "../../../assets/bg-goals2.png";
-import { ArrowLeft } from "lucide-react";
 import partener9 from "../../../assets/partener9.png";
 import partener10 from "../../../assets/partener10.png";
 import partener11 from "../../../assets/partener11.png";
@@ -17,6 +16,7 @@ import partener15 from "../../../assets/partener15.png";
 import partener16 from "../../../assets/partener16.png";
 import partener17 from "../../../assets/partener17.png";
 import partener18 from "../../../assets/partener18.png";
+import { Link } from "@/i18n/routing";
 
 export default function FeaturesEffect() {
   const locale = useLocale();
@@ -89,11 +89,7 @@ export default function FeaturesEffect() {
               </span>
             </div>
             <div className="flex justify-center">
-              <Image
-                src={effect1}
-                alt="effect-1"
-                className="w-full"
-              />
+              <Image src={effect1} alt="effect-1" className="w-full" />
             </div>
           </div>
 
@@ -114,11 +110,7 @@ export default function FeaturesEffect() {
               </span>
             </div>
             <div className="flex justify-center">
-              <Image
-                src={effect2}
-                alt="effect-2"
-                className="w-full"
-              />
+              <Image src={effect2} alt="effect-2" className="w-full" />
             </div>
           </div>
         </div>
@@ -363,21 +355,43 @@ export default function FeaturesEffect() {
           </div>
         </div>
 
-        <div
-          className="z-10 overflow-hidden group w-[200px] m-auto relative flex justify-center items-center gap-2 text-[#141414F5] bg-[#FFFFFF] rounded-[13px] py-4
-         px-[13px] text-base font-semibold cursor-pointer hover:rounded-3xl transition-all duration-300"
-        >
-          <ArrowLeft
-            color="#141414F5"
-            size={15}
-            className="ml-2 absolute -right-4 group-hover:right-4 transition-all duration-200"
-          />
-          جرّب مدير مجانًا
-          <ArrowLeft
-            color="#141414F5"
-            size={15}
-            className="group-hover:hidden transition-opacity duration-200"
-          />
+        <div className="relative group hover:-translate-x-1  transition-all duration-300 w-fit m-auto  ">
+          <Link
+            href="/create-account"
+            className="peer px-5  py-[16px] flex items-center overflow-hidden duration-300 transition-all  font-bold text-md bg-white text-[#000] rounded-2xl relative group-hover:hover:rounded-3xl "
+          >
+            <div className="pl-3 transform transition-all duration-300 group-hover:translate-x-[-1.7em]">
+              جرّب مدير مجانًا
+            </div>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-all duration-300 group-hover:translate-x-[-3em] rotate-180"
+            >
+              <path
+                d="M16 7.38197L15.4495 7.10674L15.4484 7.10617L15.4455 7.10464L15.4188 7.09062C15.393 7.07688 15.3516 7.05438 15.2965 7.02295C15.1862 6.96006 15.0213 6.86173 14.8166 6.72686C14.4066 6.45661 13.8417 6.0427 13.2383 5.47699C12.029 4.34323 10.6931 2.62752 10.1006 0.257465L8.16032 0.742531C8.87215 3.58987 10.4711 5.62416 11.8704 6.93606C11.8933 6.95756 11.9162 6.97887 11.9391 7H0V9H11.9391C11.9162 9.02112 11.8933 9.04244 11.8704 9.06394C10.4711 10.3758 8.87215 12.4101 8.16032 15.2575L10.1006 15.7425C10.6931 13.3725 12.029 11.6568 13.2383 10.523Z"
+                fill="#1A1919"
+              />
+            </svg>
+          </Link>
+          <div className="absolute text-[#1A1919] right-[-1em] top-1/2 -translate-y-1/2 w-4 h-4  transition-all duration-300">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-transform duration-300 group-hover:translate-x-[-2em] rotate-180"
+            >
+              <path
+                d="M16 7.38197L15.4495 7.10674L15.4484 7.10617L15.4455 7.10464L15.4188 7.09062C15.393 7.07688 15.3516 7.05438 15.2965 7.02295C15.1862 6.96006 15.0213 6.86173 14.8166 6.72686C14.4066 6.45661 13.8417 6.0427 13.2383 5.47699C12.029 4.34323 10.6931 2.62752 10.1006 0.257465L8.16032 0.742531C8.87215 3.58987 10.4711 5.62416 11.8704 6.93606C11.8933 6.95756 11.9162 6.97887 11.9391 7H0V9H11.9391C11.9162 9.02112 11.8933 9.04244 11.8704 9.06394C10.4711 10.3758 8.87215 12.4101 8.16032 15.2575L10.1006 15.7425C10.6931 13.3725 12.029 11.6568 13.2383 10.523Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
         </div>
         <div className="text-center mb-28 w-full">
           {/* Scrolling Partners Section */}
